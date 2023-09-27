@@ -71,7 +71,7 @@ while True:
             total_coins, cost = coins(selection)
             if coins_check(total_coins, cost):
                 report.resources["money"] = cost
-                # The machine should add the cost to report was profit and return change if too much inserted.
+                # The machine should add the cost to report if it was profit and return change if too much inserted.
                 if total_coins > cost:
                     # The change should round to 2 decimal points.
                     print(f"Here is ${give_back:.2f} in change.")
