@@ -27,7 +27,7 @@ import random
 import smtplib
 
 
-my_email = "garysiu@outlook.com"
+my_email = ""
 password = ""
 
 current_day = dt.datetime.now()
