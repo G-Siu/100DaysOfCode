@@ -19,8 +19,8 @@ class NotificationManager:
         telegram_bot_sendtext(text)
 
     def send_email(self, emails, text):
-        my_email = "garysiu@outlook.com"
-        password = "kmhqaidkdqfevvwa"
+        my_email = ""
+        password = os.environ["OUTLOOK_KEY"]
         with smtplib.SMTP("outlook.office365.com", port=587) as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
