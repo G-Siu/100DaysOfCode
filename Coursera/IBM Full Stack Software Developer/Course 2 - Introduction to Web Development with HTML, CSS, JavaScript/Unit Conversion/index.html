@@ -4,6 +4,7 @@
         <!-- This is your page title that appears on the browser window or tab -->
         <title>Unit Conversions</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
     </head>
     <body>
         <section id="home">
@@ -42,11 +43,11 @@
                             <legend>Temperature</legend>
                             <!-- Label for Temperature input -->
                             <label for="Temperature">Celsius</label> <br />
-                            <input type="number" id="c" /> <br />
+                            <input type="number" id="celsius" /> <br />
                             <!-- The conversion button -->
-                            <button id="temperature">Convert</button> <br />
+                            <button id="temperature" onclick="temperature()">Convert</button> <br />
                             <!-- Label for Temperature output -->
-                            <input type="number" id="f" /> <br />
+                            <input type="number" id="fahrenheit" /> <br />
                             <label for="Temperature">Fahrenheit</label>
                         </fieldset>
                     </article>
@@ -75,7 +76,7 @@
                             <label for="Weight">Kilograms</label> <br />
                             <input type="number" id="kg" /> <br />
                             <!-- The conversion button -->
-                            <button id="weight">Convert</button> <br />
+                            <button id="weight" onclick="weight()">Convert</button> <br />
                             <!-- Label for Weight output -->
                             <input type="number" id="lbs" /> <br />
                             <label for="Weight">Pounds</label>
@@ -107,7 +108,7 @@
                             <label for="Distance">Kilometers</label> <br />
                             <input type="number" id="km" /> <br />
                             <!-- The conversion button -->
-                            <button id="distance">Convert</button> <br />
+                            <button id="distance" onclick="distance()">Convert</button> <br />
                             <!-- Label for Distance output -->
                             <input type="number" id="miles" /> <br />
                             <label for="Distance">Miles</label>
