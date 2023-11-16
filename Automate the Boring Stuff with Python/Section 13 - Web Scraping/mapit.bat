@@ -1,0 +1,1 @@
+@py.exe "C:\Users\garys\OneDrive\Python\Courses\Automate the Boring Stuff with Python\Section 13 - Web Scraping\mapit.py" %*

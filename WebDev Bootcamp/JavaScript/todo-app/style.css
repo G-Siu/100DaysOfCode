@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e3e9ff
+}
+
+body {
+    max-width: 360px;
+    margin: 1rem auto;
+}
+
+header {
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #3876bf;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size:  1.6em;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.new {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.new-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    font-size: 1.2em;
+}
+
+.new-button {
+    border: 0;
+    padding: 0 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #3876bf;
+    cursor: pointer;
+}
+
+.new-button:hover {
+    background-color: #3876bf;
+}
+
+.new-button:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.item {
+    display: flex;
+    padding: 20px 10px;
+    background-color: white;
+}
+
+.item-check {
+    margin-right: 1rem;
+}
+
+.item-text {
+    color: #6d748a
+}
+
+.delete {
+    visibility: hidden;
+    width: 20px;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    color: transparent
+}
+
+.delete::after {
+    content: "x";
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.item:hover .delete {
+    visibility: visible;
+}
+
+.item-check:checked + .item-text {
+    text-decoration: line-through;
+}
