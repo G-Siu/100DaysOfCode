@@ -13,16 +13,26 @@ def arithmetic_arranger(problems, answer=False):
         bottom_row.append(separate[2])
         top_length.append(len(separate[0]))
         bottom_length.append(len(separate[2]))
+
+        # Return error if non digit character found
+        if separate[0].isdigit() is False or separate[2].isdigit() is False:
+            return "Error: Numbers must only contain digits."
+
+        # Check operands
         if separate[1] == "+":
             calculate = int(separate[0]) + int(separate[2])
             answers.append(str(calculate))
         elif separate[1] == "-":
             calculate = int(separate[0]) - int(separate[2])
             answers.append(str(calculate))
+        # Return error if / or x operand
+        elif separate[1] == "/" or separate[1] == "x":
+            return "Error: Operator must be '+' or '-'."
     for i in range(len(top_length)):
         # Error for max operand of over four digits
         if top_length[i] > 4 or bottom_length[i] > 4:
-            raise ValueError("Error: Numbers cannot be more than four digits.")
+            return "Error: Numbers cannot be more than four digits."
+        # Format mathematics rows
         if top_length[i] > bottom_length[i]:
             difference = top_length[i] - bottom_length[i]
             top_row[i] = " " * 2 + top_row[i] + " " * 4
@@ -47,8 +57,8 @@ def arithmetic_arranger(problems, answer=False):
 
     if answer:
         arranged_problems += "\n" + "".join(answers)
-    # Raise error if more than five problems entered
+    # Return error if more than five problems entered
     if len(problems) > 5:
         return "Error: Too many problems."
     else:
-        return arranged_problems
+        return arranged_problems.rstrip()
