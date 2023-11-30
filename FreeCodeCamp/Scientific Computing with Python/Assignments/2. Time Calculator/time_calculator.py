@@ -36,6 +36,8 @@ def add_time(start, duration, start_day=None):
         display_meridiem = "AM"
         add_days += 1
     # Format time to 12 hours
+    elif display_hours == 12:
+        display_meridiem = "PM"
     elif display_hours > 12:
         display_hours -= 12
         display_meridiem = "PM"
@@ -66,8 +68,8 @@ def add_time(start, duration, start_day=None):
 def day_week(start_day, add_days=0):
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
             "Saturday", "Sunday"]
-    day_number = days.index(start_day) + add_days
+    day_number = days.index(start_day.lower().title()) + add_days
     if day_number + 1 > 7:
-        return days[day_number % len(day_number)]
+        return days[day_number % len(days)]
     else:
         return days[day_number]
