@@ -1,4 +1,4 @@
-def add_time(start, duration):
+def add_time(start, duration, *args):
     # Duration reduced by number of days
     add_hours, add_minutes = map(int, duration.split(":"))
     if add_hours > 24:
@@ -6,7 +6,7 @@ def add_time(start, duration):
         remaining_hours = add_hours % 24
     else:
         remaining_hours = add_hours
-
+        add_days = 0
     # Determine AM/PM hours
     start_hours, start_second_part = start.split(":")
     start_minutes, start_meridiem = start_second_part.split()
@@ -16,9 +16,8 @@ def add_time(start, duration):
     if start_meridiem == "PM":
         start_hours += 12
 
-    # Initialise variables
+    # Initialise variable
     display_hours = 0
-    add_days = 0
     # Add minutes
     total_minutes = start_minutes + add_minutes
     if total_minutes > 60:
@@ -32,7 +31,11 @@ def add_time(start, duration):
         add_days += 1
         display_hours %= 24
     # Format time to 12 hours
-    if display_hours > 12:
+    if display_hours == 24:
+        display_hours -= 24
+        display_meridiem = "AM"
+        add_days += 1
+    elif display_hours > 12:
         display_hours -= 12
         display_meridiem = "PM"
     else:
@@ -52,4 +55,6 @@ def add_time(start, duration):
                 f"{display_meridiem}{display_days_later}")
 
     return new_time
-# def day_week():
+def day_week(start_day):
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+            "Saturday", "Sunday"]
