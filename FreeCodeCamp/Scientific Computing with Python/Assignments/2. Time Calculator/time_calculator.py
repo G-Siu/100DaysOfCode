@@ -1,4 +1,4 @@
-def add_time(start, duration, *args):
+def add_time(start, duration, start_day=None):
     # Duration reduced by number of days
     add_hours, add_minutes = map(int, duration.split(":"))
     if add_hours > 24:
@@ -30,11 +30,12 @@ def add_time(start, duration, *args):
     if display_hours > 24:
         add_days += 1
         display_hours %= 24
-    # Format time to 12 hours
+    # Format midnight
     if display_hours == 24:
         display_hours -= 24
         display_meridiem = "AM"
         add_days += 1
+    # Format time to 12 hours
     elif display_hours > 12:
         display_hours -= 12
         display_meridiem = "PM"
@@ -54,7 +55,19 @@ def add_time(start, duration, *args):
     new_time = (f"{display_hours}:{"{:02d}".format(display_minutes)} "
                 f"{display_meridiem}{display_days_later}")
 
+    # Add the day if argument available
+    if start_day is not None:
+        day = day_week(start_day, add_days)
+        new_time += " " + day
+
     return new_time
-def day_week(start_day):
+
+
+def day_week(start_day, add_days=0):
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
             "Saturday", "Sunday"]
+    day_number = days.index(start_day) + add_days
+    if day_number + 1 > 7:
+        return days[day_number % len(day_number)]
+    else:
+        return days[day_number]
