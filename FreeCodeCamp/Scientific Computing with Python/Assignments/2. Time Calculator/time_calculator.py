@@ -5,8 +5,8 @@ def add_time(start, duration, start_day=None):
         add_days = add_hours // 24
         remaining_hours = add_hours % 24
     else:
-        remaining_hours = add_hours
         add_days = 0
+        remaining_hours = add_hours
     # Determine AM/PM hours
     start_hours, start_second_part = start.split(":")
     start_minutes, start_meridiem = start_second_part.split()
@@ -32,7 +32,11 @@ def add_time(start, duration, start_day=None):
         display_hours %= 24
     # Format midnight
     if display_hours == 24:
-        display_hours -= 24
+        display_hours -= 12
+        display_meridiem = "AM"
+        add_days += 1
+    elif display_hours == 0:
+        display_hours += 12
         display_meridiem = "AM"
         add_days += 1
     # Format time to 12 hours
