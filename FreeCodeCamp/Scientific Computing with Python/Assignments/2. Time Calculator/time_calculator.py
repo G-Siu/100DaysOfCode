@@ -60,7 +60,8 @@ def add_time(start, duration, start_day=None):
     # Add the day if argument available
     if start_day is not None:
         day = day_week(start_day, add_days)
-        new_time += " " + day
+        pos = new_time.find("M") + 1
+        new_time = new_time[:pos] + ", " + day + new_time[pos:]
 
     return new_time
 
