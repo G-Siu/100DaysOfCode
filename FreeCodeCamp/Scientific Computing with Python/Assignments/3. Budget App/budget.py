@@ -14,26 +14,32 @@ class Category:
         self.ledger.append(deposit_dict)
 
     # Similar to deposit, but pass amount as into ledger as negative number
-    @classmethod
-    def withdraw(cls):
-        # With description
+    def withdraw(self, amount, description=""):
+        withdraw_dict = dict()
+        # {"amount": -amount, "description": description}
+        withdraw_dict["amount"] = -amount
+        withdraw_dict["description"] = description
+        # Append object to ledger list
+        self.ledger.append(withdraw_dict)
 
-        # If no description, default to empty string
-
-        # Append object to ledger list as:
-        # {"amount": amount, "description": description}
-
-        # Return True if withdrawal successful, or False if not
-        pass
+        # # Return True if withdrawal successful, or False if not
+        # if Category.check_funds(amount):
+        #     withdraw_dict = dict()
+        #     # {"amount": -amount, "description": description}
+        #     withdraw_dict["amount"] = -amount
+        #     withdraw_dict["description"] = description
+        #     # Append object to ledger list
+        #     self.ledger.append(withdraw_dict)
+        #     return True
+        # else:
+        #     return False
 
     # Returns current balance of budget category
-    @classmethod
-    def get_balance(cls):
-        pass
+    def get_balance(self):
+        return sum(item["amount"] for item in self.ledger)
 
     # Accepts amount and another budget category as arguments
-    @classmethod
-    def transfer(cls):
+    def transfer(self):
         # Withdraw amount
 
         # Add description "Transfer to [Destination Budget Category]"
@@ -50,8 +56,7 @@ class Category:
         pass
 
     # Accepts amount as argument, used by both Withdraw and Transfer methods
-    @classmethod
-    def check_funds(cls):
+    def check_funds(self, amount):
         # Return False if amount is greater than budget category balance
         # Else Return True
         pass
