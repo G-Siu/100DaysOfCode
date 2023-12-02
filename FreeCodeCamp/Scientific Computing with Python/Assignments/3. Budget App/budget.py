@@ -3,6 +3,24 @@ class Category:
         self.category = category
         self.ledger = []
 
+    # Return budget when category is printed
+    def __str__(self):
+        # Center title of category between * characters of a 30 character line
+        title_line = self.category.center(30, "*")
+        line = list()
+        total = 0
+        # Ledger items. 23 characters of description displayed, then the amount
+        for item in self.ledger:
+            # Amount is right aligned, max 7 characters
+            line.append((item["description"].ljust(23)
+                         + "{0:.2f}".format(item["amount"]).rjust(7)
+                         + "\n"))
+            # Add amount for total
+            total += item["amount"]
+        combine = (f"{title_line}\n{"".join(line)}Total: "
+                   f"{"{0:.2f}".format(total)}")
+        return combine
+
     # Accepts an amount and description
     # If no description, default to empty string
     def deposit(self, amount, description=""):
@@ -61,12 +79,6 @@ class Category:
             return False
         else:
             return True
-
-# When budget is printed:
-# - Center title of category between * characters of a 30 character line
-# - List of items in ledger. First 23 characters of description is displayed,
-# then the amount
-# - Final line displaying category total
 
 
 # Takes list of categories as argument.
