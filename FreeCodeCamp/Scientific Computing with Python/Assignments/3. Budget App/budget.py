@@ -39,21 +39,26 @@ class Category:
         return sum(item["amount"] for item in self.ledger)
 
     # Accepts amount and another budget category as arguments
-    def transfer(self):
+    def transfer(self, amount, category):
         # Withdraw amount
-
+        transfer_dict = dict()
+        transfer_dict["amount"] = -amount
         # Add description "Transfer to [Destination Budget Category]"
-
+        transfer_dict["description"] = "Transfer to " + category.category
+        self.ledger.append(transfer_dict)
+        recipient_dict = dict()
         # Deposit into the other budget category
-
+        recipient_dict["amount"] = amount
         # Add description "Transfer from [Source Budget Category]"
+        recipient_dict["description"] = (f"Transfer from "
+                                         f"{self.category}")
+        category.ledger.append(recipient_dict)
 
         # If insufficient funds to withdraw, nothing should be added to
         # either ledgers
 
         # Return True if successful transfer
         # Return False if not
-        pass
 
     # Accepts amount as argument, used by both Withdraw and Transfer methods
     def check_funds(self, amount):
