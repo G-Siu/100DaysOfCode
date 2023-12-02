@@ -1,17 +1,17 @@
 class Category:
-    def __init__(self):
-        self.ledger
+    def __init__(self, category):
+        self.category = category
+        self.ledger = []
 
     # Accepts an amount and description
-    @classmethod
-    def deposit(cls):
-        # With description
-
-        # If no description, default to empty string
-
-        # Append object to ledger list as:
+    # If no description, default to empty string
+    def deposit(self, amount, description=""):
+        deposit_dict = dict()
         # {"amount": amount, "description": description}
-        pass
+        deposit_dict["amount"] = amount
+        deposit_dict["description"] = description
+        # Append object to ledger list
+        self.ledger.append(deposit_dict)
 
     # Similar to deposit, but pass amount as into ledger as negative number
     @classmethod
