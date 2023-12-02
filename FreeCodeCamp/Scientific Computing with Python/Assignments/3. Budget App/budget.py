@@ -15,24 +15,17 @@ class Category:
 
     # Similar to deposit, but pass amount as into ledger as negative number
     def withdraw(self, amount, description=""):
-        withdraw_dict = dict()
-        # {"amount": -amount, "description": description}
-        withdraw_dict["amount"] = -amount
-        withdraw_dict["description"] = description
-        # Append object to ledger list
-        self.ledger.append(withdraw_dict)
-
-        # # Return True if withdrawal successful, or False if not
-        # if Category.check_funds(amount):
-        #     withdraw_dict = dict()
-        #     # {"amount": -amount, "description": description}
-        #     withdraw_dict["amount"] = -amount
-        #     withdraw_dict["description"] = description
-        #     # Append object to ledger list
-        #     self.ledger.append(withdraw_dict)
-        #     return True
-        # else:
-        #     return False
+        # Return True if withdrawal successful, or False if not
+        if Category.check_funds(self, amount):
+            withdraw_dict = dict()
+            # {"amount": -amount, "description": description}
+            withdraw_dict["amount"] = -amount
+            withdraw_dict["description"] = description
+            # Append object to ledger list
+            self.ledger.append(withdraw_dict)
+            return True
+        else:
+            return False
 
     # Returns current balance of budget category
     def get_balance(self):
@@ -40,31 +33,34 @@ class Category:
 
     # Accepts amount and another budget category as arguments
     def transfer(self, amount, category):
-        # Withdraw amount
-        transfer_dict = dict()
-        transfer_dict["amount"] = -amount
-        # Add description "Transfer to [Destination Budget Category]"
-        transfer_dict["description"] = "Transfer to " + category.category
-        self.ledger.append(transfer_dict)
-        recipient_dict = dict()
-        # Deposit into the other budget category
-        recipient_dict["amount"] = amount
-        # Add description "Transfer from [Source Budget Category]"
-        recipient_dict["description"] = (f"Transfer from "
-                                         f"{self.category}")
-        category.ledger.append(recipient_dict)
-
         # If insufficient funds to withdraw, nothing should be added to
         # either ledgers
-
-        # Return True if successful transfer
-        # Return False if not
+        if Category.check_funds(self, amount):
+            # Withdraw amount
+            transfer_dict = dict()
+            transfer_dict["amount"] = -amount
+            # Add description "Transfer to [Destination Budget Category]"
+            transfer_dict["description"] = "Transfer to " + category.category
+            self.ledger.append(transfer_dict)
+            recipient_dict = dict()
+            # Deposit into the other budget category
+            recipient_dict["amount"] = amount
+            # Add description "Transfer from [Source Budget Category]"
+            recipient_dict["description"] = (f"Transfer from "
+                                             f"{self.category}")
+            category.ledger.append(recipient_dict)
+            # Return True if successful transfer
+            return True
+        else:
+            return False
 
     # Accepts amount as argument, used by both Withdraw and Transfer methods
     def check_funds(self, amount):
         # Return False if amount is greater than budget category balance
-        # Else Return True
-        pass
+        if amount > Category.get_balance(self):
+            return False
+        else:
+            return True
 
 # When budget is printed:
 # - Center title of category between * characters of a 30 character line
