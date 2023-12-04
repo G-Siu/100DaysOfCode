@@ -81,15 +81,34 @@ class Category:
             return True
 
 
-# Takes list of categories as argument.
+# Takes list of categories as argument. Return a string as bar chart:
 def create_spend_chart(categories):
-    # Return a string as bar chart:
-    # - Percentage spent in each category passed into this function
-    # - Percentage spent should only consider withdrawals
+    # Title top of chart
+    title_line = "Percentage spent by category"
+    # Get amounts from each category
+    ledgers = [item.ledger for item in categories]
+    amounts = list()
+    positives = list()
+    negatives = list()
+    percentages = list()
+    # Pick out amounts in each category ledger
+    for ledger in ledgers:
+        amounts.append([item["amount"] for item in ledger])
+    # Total positive and negative balances in each category
+    for amount in amounts:
+        positives.append(sum(item for item in amount if str(item)[0] != "-"))
+        negatives.append(-sum(item for item in amount if str(item)[0] == "-"))
+    # return positives, negatives
+    # Percentage spent in each category
+    for positive, negative in positives, negatives:
+        percentages.append(round((negative / positive) * 100, -1))
+    return percentages
     # - Y-axis should be labeled 0-100, increments of 10
+    for label in range(100, 0, -10):
+
     # - The 'bars' are made of represented as 'o'
     # - Height of each bar is rounded to nearest 10
+    # round(percentage, -1)
     # - A dashed horizontal line should go two characters past the final bar
     # - Each category name should be vertically displayed below this line
-    # - Title at top should say "Percentage spent by category"
-    pass
+
