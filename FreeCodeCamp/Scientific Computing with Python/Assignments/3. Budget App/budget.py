@@ -12,7 +12,7 @@ class Category:
         # Ledger items. 23 characters of description displayed, then the amount
         for item in self.ledger:
             # Amount is right aligned, max 7 characters
-            line.append((item["description"][:23].ljust(23)
+            line.append((item["description"].ljust(23)
                          + "{0:.2f}".format(item["amount"]).rjust(7)
                          + "\n"))
             # Add amount for total
@@ -97,27 +97,25 @@ def create_spend_chart(categories):
     for amount in amounts:
         positives.append(sum(item for item in amount if str(item)[0] != "-"))
         negatives.append(-sum(item for item in amount if str(item)[0] == "-"))
+
     # Percentage spent in each category
     percentages = list()
     try:
-        for i in range(len(positives)):
+        for positive, negative in positives, negatives:
             # Height of each bar is rounded to nearest 10
-            percentages.append(round((negatives[i] / positives[i]) * 100, -1))
+            percentages.append(round((negative / positive) * 100, -1))
     except ValueError:
         percentages.append(0)
     chart_line = list()
     # Title top of chart
     chart_line.append("Percentage spent by category\n")
     # Y-axis labeled 0-100, increments of 10
-    for label in range(100, -1, -10):
+    for label in range(100, -10, -10):
         chart_line.append(f"{label}|".rjust(4))
         # 'Bars' are represented as 'o'
-        for i in range(len(percentages)):
-            if percentages[i - 1] < label <= percentages[i]:
-                chart_line[-1] += (" " * 3) * i + " o "
-            elif percentages[i] >= label:
+        for percentage in percentages:
+            if percentage >= label:
                 chart_line[-1] += " o "
-
         chart_line[-1] += "\n"
     # Dashed horizontal line goes two characters past the final bar
     chart_line.append((" " * 4) + ("-" * 3) * len(categories) + "-\n")
