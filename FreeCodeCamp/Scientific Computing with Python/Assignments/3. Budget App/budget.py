@@ -100,10 +100,12 @@ def create_spend_chart(categories):
 
     # Percentage spent in each category
     percentages = list()
-    for positive, negative in positives, negatives:
-        # Height of each bar is rounded to nearest 10
-        percentages.append(round((negative / positive) * 100, -1))
-
+    try:
+        for positive, negative in positives, negatives:
+            # Height of each bar is rounded to nearest 10
+            percentages.append(round((negative / positive) * 100, -1))
+    except ValueError:
+        percentages.append(0)
     chart_line = list()
     # Title top of chart
     chart_line.append("Percentage spent by category\n")
@@ -116,7 +118,30 @@ def create_spend_chart(categories):
                 chart_line[-1] += " o "
         chart_line[-1] += "\n"
     # Dashed horizontal line goes two characters past the final bar
-    chart_line.append(("-" * 3) * len(categories) + "-")
-    return chart_line
-    # - Each category name should be vertically displayed below this line
-    for word in
+    chart_line.append(("-" * 3) * len(categories) + "-\n")
+    # Category vertically displayed
+    vertical_words = list()
+    count = -1  # To get empty spaces in the previous category column
+    for words in categories:
+        count += 1
+        word = words.category
+        # List each letter
+        vertical_word = [f" {v} " for i, v in enumerate(word)]
+        lengths = len(vertical_words)
+        length = len(vertical_word)
+        if not vertical_words:
+            vertical_words = vertical_word
+        elif length > lengths:
+            for i in range(lengths):
+                vertical_words[i] = vertical_words[i] + vertical_word[i]
+            for i in range(lengths, length):
+                vertical_words.append("   " * count + vertical_word[i])
+        else:
+            for i in range(len(vertical_word)):
+                vertical_words[i] = vertical_words[i] + vertical_word[i]
+    for column in range(len(vertical_words)):
+        vertical_words[column] += "\n"
+
+    # Combine chart sections
+    chart_line.extend(vertical_words)
+    return "".join(chart_line)
