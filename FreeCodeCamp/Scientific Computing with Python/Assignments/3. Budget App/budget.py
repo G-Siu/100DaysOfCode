@@ -134,6 +134,9 @@ def create_spend_chart(categories):
         if not vertical_words:
             vertical_words = [" " * 4 + letter for letter in vertical_word]
         elif length > lengths:
+            for i in range(1, lengths):
+                if len(vertical_words[i]) != len(vertical_words[i-1]):
+                    vertical_words[i] += " " * 3
             for i in range(lengths):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
             for i in range(lengths, length):
@@ -142,8 +145,8 @@ def create_spend_chart(categories):
         else:
             for i in range(len(vertical_word)):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
-    for column in range(len(vertical_words)):
-        vertical_words[column] += "\n"
+    for column in range(len(vertical_words)-1):
+        vertical_words[column] += " \n"
 
     # Combine chart sections
     chart_line.extend(vertical_words)
