@@ -111,14 +111,14 @@ def create_spend_chart(categories):
     chart_line.append("Percentage spent by category\n")
     # Y-axis labeled 0-100, increments of 10
     for label in range(100, -10, -10):
-        chart_line.append(f"{label}|")
+        chart_line.append(f"{label}|".rjust(4))
         # 'Bars' are represented as 'o'
         for percentage in percentages:
             if percentage >= label:
                 chart_line[-1] += " o "
         chart_line[-1] += "\n"
     # Dashed horizontal line goes two characters past the final bar
-    chart_line.append(("-" * 3) * len(categories) + "-\n")
+    chart_line.append((" " * 4) + ("-" * 3) * len(categories) + "-\n")
     # Category vertically displayed
     vertical_words = list()
     count = -1  # To get empty spaces in the previous category column
@@ -130,12 +130,13 @@ def create_spend_chart(categories):
         lengths = len(vertical_words)
         length = len(vertical_word)
         if not vertical_words:
-            vertical_words = vertical_word
+            vertical_words = [" " * 4 + letter for letter in vertical_word]
         elif length > lengths:
             for i in range(lengths):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
             for i in range(lengths, length):
-                vertical_words.append("   " * count + vertical_word[i])
+                vertical_words.append(" " * 4 + "   " * count +
+                                      vertical_word[i])
         else:
             for i in range(len(vertical_word)):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
