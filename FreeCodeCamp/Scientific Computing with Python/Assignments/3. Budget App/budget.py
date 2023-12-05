@@ -92,10 +92,8 @@ def create_spend_chart(categories):
         amounts.append([item["amount"] for item in ledger])
 
     # Total positive and negative balances in each category
-    # positives = list()
     negatives = list()
     for amount in amounts:
-        # positives.append(sum(item for item in amount if str(item)[0] != "-"))
         negatives.append(-sum(item for item in amount if str(item)[0] == "-"))
     # Percentage of total spent in each category
     percentages = list()
@@ -116,11 +114,13 @@ def create_spend_chart(categories):
         # 'Bars' are represented as 'o'
         for i in range(len(percentages)):
             if percentages[i - 1] < label <= percentages[i]:
-                chart_line[-1] += (" " * 3) * i + " o "
+                chart_line[-1] += " o "
             elif percentages[i] >= label:
                 chart_line[-1] += " o "
+            else:
+                chart_line[-1] += " " * 3
 
-        chart_line[-1] += "\n"
+        chart_line[-1] += " \n"
     # Dashed horizontal line goes two characters past the final bar
     chart_line.append((" " * 4) + ("-" * 3) * len(categories) + "-\n")
     # Category vertically displayed
@@ -153,7 +153,7 @@ def create_spend_chart(categories):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
     for column in range(len(vertical_words) - 1):
         vertical_words[column] += " \n"
-
+    vertical_words[-1] += " "
     # Combine chart sections
     chart_line.extend(vertical_words)
     return "".join(chart_line)
