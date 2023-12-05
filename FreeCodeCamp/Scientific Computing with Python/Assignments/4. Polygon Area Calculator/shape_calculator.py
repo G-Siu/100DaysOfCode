@@ -23,7 +23,7 @@ class Rectangle:
 
     def get_picture(self):
         if self.width > 50 or self.height > 50:
-            return "Too big for picture"
+            return "Too big for picture."
         return ("*" * self.width + "\n") * self.height
 
     # Return number of times shape can fit inside shape without rotation
