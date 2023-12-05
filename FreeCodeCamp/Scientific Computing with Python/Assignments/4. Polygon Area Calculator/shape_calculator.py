@@ -26,11 +26,10 @@ class Rectangle:
             return "Too big for picture"
         return ("*" * self.width + "\n") * self.height
 
+    # Return number of times shape can fit inside shape without rotation
     def get_amount_inside(self, shape):
-        pass
         # Take another shape as argument
-        # Return number of times the passed shape can fit inside shape
-        # without rotation.
+        return self.get_area() // shape.get_area()
 
 
 # Subclass of Rectangle(), single side length passed in
@@ -54,4 +53,3 @@ class Square(Rectangle):
     def set_side(self, side):
         self.width = side
         self.height = side
-
