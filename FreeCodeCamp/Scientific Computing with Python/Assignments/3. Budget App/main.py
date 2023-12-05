@@ -35,7 +35,5 @@ print(create_spend_chart([food, clothing, auto]))
 # business.withdraw(10.99)
 # print(create_spend_chart([food, entertainment, business]))
 
-# round down to nearest 10
+
 # total spending (withdrawal) and percentage spent in each category
-# def_round_down(num, div)
-#     return num - (num % div)

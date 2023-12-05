@@ -92,17 +92,19 @@ def create_spend_chart(categories):
         amounts.append([item["amount"] for item in ledger])
 
     # Total positive and negative balances in each category
-    positives = list()
+    # positives = list()
     negatives = list()
     for amount in amounts:
-        positives.append(sum(item for item in amount if str(item)[0] != "-"))
+        # positives.append(sum(item for item in amount if str(item)[0] != "-"))
         negatives.append(-sum(item for item in amount if str(item)[0] == "-"))
     # Percentage of total spent in each category
     percentages = list()
+    total_negatives = sum(negatives)
     try:
-        for i in range(len(positives)):
+        for i in range(len(negatives)):
             # Height of each bar is rounded down to nearest 10
-            percentages.append(round((negatives[i] / positives[i]) * 100, -1))
+            percentages.append(round_down((negatives[i]
+                                           / total_negatives) * 100, 10))
     except ValueError:
         percentages.append(0)
     chart_line = list()
@@ -137,7 +139,7 @@ def create_spend_chart(categories):
         elif length > lengths:
             # Add empty spaces in place of column if no letter
             for i in range(1, lengths):
-                if len(vertical_words[i]) != len(vertical_words[i-1]):
+                if len(vertical_words[i]) != len(vertical_words[i - 1]):
                     vertical_words[i] += " " * 3
             # Add letter as normal
             for i in range(lengths):
@@ -149,9 +151,14 @@ def create_spend_chart(categories):
         else:
             for i in range(len(vertical_word)):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
-    for column in range(len(vertical_words)-1):
+    for column in range(len(vertical_words) - 1):
         vertical_words[column] += " \n"
 
     # Combine chart sections
     chart_line.extend(vertical_words)
     return "".join(chart_line)
+
+
+# Function to round down to nearest 10
+def round_down(num, div):
+    return num - (num % div)
