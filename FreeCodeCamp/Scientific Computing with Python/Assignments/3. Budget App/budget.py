@@ -97,11 +97,11 @@ def create_spend_chart(categories):
     for amount in amounts:
         positives.append(sum(item for item in amount if str(item)[0] != "-"))
         negatives.append(-sum(item for item in amount if str(item)[0] == "-"))
-    # Percentage spent in each category
+    # Percentage of total spent in each category
     percentages = list()
     try:
         for i in range(len(positives)):
-            # Height of each bar is rounded to nearest 10
+            # Height of each bar is rounded down to nearest 10
             percentages.append(round((negatives[i] / positives[i]) * 100, -1))
     except ValueError:
         percentages.append(0)
@@ -131,14 +131,18 @@ def create_spend_chart(categories):
         vertical_word = [f" {v} " for i, v in enumerate(word)]
         lengths = len(vertical_words)
         length = len(vertical_word)
+        # Starts with first word in first column
         if not vertical_words:
             vertical_words = [" " * 4 + letter for letter in vertical_word]
         elif length > lengths:
+            # Add empty spaces in place of column if no letter
             for i in range(1, lengths):
                 if len(vertical_words[i]) != len(vertical_words[i-1]):
                     vertical_words[i] += " " * 3
+            # Add letter as normal
             for i in range(lengths):
                 vertical_words[i] = vertical_words[i] + vertical_word[i]
+            # Add space if new line with no letter in first column
             for i in range(lengths, length):
                 vertical_words.append(" " * 4 + "   " * count +
                                       vertical_word[i])

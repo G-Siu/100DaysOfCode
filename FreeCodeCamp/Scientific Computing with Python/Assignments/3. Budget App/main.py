@@ -24,3 +24,18 @@ print(create_spend_chart([food, clothing, auto]))
 # Run unit tests automatically
 # main(module='test_module', exit=False)
 
+# food = budget.Category("Food")
+# food.deposit(900, "deposit")
+# entertainment = budget.Category("Entertainment")
+# entertainment.deposit(900, "deposit")
+# business = budget.Category("Business")
+# business.deposit(900, "deposit")
+# food.withdraw(105.55)
+# entertainment.withdraw(33.40)
+# business.withdraw(10.99)
+# print(create_spend_chart([food, entertainment, business]))
+
+# round down to nearest 10
+# total spending (withdrawal) and percentage spent in each category
+# def_round_down(num, div)
+#     return num - (num % div)
