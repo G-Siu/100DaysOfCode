@@ -5,23 +5,30 @@
 # getpass allow user to enter a password and blank the input
 import getpass
 
+# Ask for username and password
+username = input("Username: ").title()
+password = getpass.getpass()
 
+# Check user inputs
+if username == "Gary" and password == "password":
+    print("Login successful!")
+    # Display menu of ticket options
+    print("1. Adult\n2. Child\n3. Student\n4. OAP\n5. Exit")
+    # Ask for user choice
+    choice = input("Choose from the above ticket options: ").title()
 
-# Display menu of ticket options
-print("1. Adult\n2. Child\n3. Student\n4. OAP\n5. Exit")
-# Ask for user choice
-choice = input("Choose from the above ticket options: ").title()
-
-# Conditions for user choice
-if choice == "1" or choice == "Adult":
-    print("Adult - £19.95")
-elif choice == "2" or choice == "Child":
-    print("Child - £9.95")
-elif choice == "3" or choice == "Student":
-    print("Student - £17.95")
-elif choice == "4" or choice == "OAP":
-    print("OAP - £9.95")
-elif choice == "5" or choice == "Exit":
-    print("Goodbye")
+    # Conditions for user choice
+    if choice == "1" or choice == "Adult":
+        print("Adult - Â£19.95")
+    elif choice == "2" or choice == "Child":
+        print("Child - Â£9.95")
+    elif choice == "3" or choice == "Student":
+        print("Student - Â£17.95")
+    elif choice == "4" or choice == "OAP":
+        print("OAP - Â£9.95")
+    elif choice == "5" or choice == "Exit":
+        print("Goodbye")
+    else:
+        print("Invalid option")
 else:
-    print("Invalid option")
+    print("Goodbye")
