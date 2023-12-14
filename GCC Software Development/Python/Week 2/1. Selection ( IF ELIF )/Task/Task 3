@@ -1,0 +1,15 @@
+1. Username & password
+Ask for username and store in a variable
+Ask for password and store in a variable
+If username is "violet" AND password is "password":
+    Say "Welcome to the site, username"
+Else:
+    Say "Incorrect User and/or password"
+
+2. Firstname or Lastname
+Ask for first name and store in a variable
+Ask for last name and store in a variable
+If first name is "violet" OR last name is "mclean":
+    Say "Welcome to the site, firstname lastname"
+Else:
+    Say "Incorrect User details"
