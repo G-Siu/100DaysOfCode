@@ -1,7 +1,7 @@
 # Learn Data Structures by Building the Merge Sort Algorithm
 # Name: G Siu
 # Date created: 24th December 2023
-# Date modified: 24th December 2023
+# Date modified: 25th December 2023
 
 
 def merge_sort(array):
