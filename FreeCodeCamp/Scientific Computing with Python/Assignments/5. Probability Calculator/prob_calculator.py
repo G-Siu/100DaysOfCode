@@ -5,12 +5,12 @@ import random
 
 
 class Hat:
-    def __init__(self, *kwargs):
+    def __init__(self, **kwargs):
         # self.colour_dict = dict()
         # for item, value in kwargs:
             # self.colour_dict["item"] = value
-        self.colour_dict = kwargs
-        return self.colour_dict
+        self.colour_dict = dict(kwargs)
+
 
     # Arguments should be converted to contents instance variable
     # List of strings representing the ball colour, and as many of that colour

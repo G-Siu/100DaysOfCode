@@ -15,4 +15,4 @@ hat = prob_calculator.Hat(blue=4, red=2, green=6)
 # Run unit tests automatically
 # main(module='test_module', exit=False)
 
-print(hat)
+print(hat.colour_dict)
