@@ -1,19 +1,18 @@
 import copy
 import random
+
+
 # Consider using the modules imported above.
 # Determine probability of drawing certain balls randomly
 
 
 class Hat:
     def __init__(self, **kwargs):
-        # self.colour_dict = dict()
-        # for item, value in kwargs:
-            # self.colour_dict["item"] = value
         self.colour_dict = dict(kwargs)
-
-
-    # Arguments should be converted to contents instance variable
-    # List of strings representing the ball colour, and as many of that colour
+        # Arguments converted to contents instance variable represented by
+        # one item for each ball in the hat
+        self.contents = [colour for colour in self.colour_dict.keys() for _
+                         in range(self.colour_dict[colour])]
 
     # Accepts argument as number of balls to be drawn
     def draw(self):
