@@ -15,12 +15,15 @@ class Hat:
                          in range(self.colour_dict[colour])]
 
     # Accepts argument as number of balls to be drawn
-    def draw(self):
+    def draw(self, balls_to_draw):
         # Remove ball from contents at random, return those balls as list of
         # strings
+        balls_drawn = [random.choice(self.contents) for _ in
+                       range(balls_to_draw)]
+        return balls_drawn
         # Should not go back into hat during draw
         # If draws exceed number of balls in hat, return all balls
-        pass
+
 
 
 # Returns probability
