@@ -15,4 +15,4 @@ hat = prob_calculator.Hat(blue=4, red=2, green=6)
 # Run unit tests automatically
 # main(module='test_module', exit=False)
 print(hat.contents)
-print(hat.draw(4))
+print(hat.draw(12))
