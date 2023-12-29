@@ -18,8 +18,13 @@ class Hat:
     def draw(self, balls_to_draw):
         # Remove ball from contents at random, return those balls as list of
         # strings
-        balls_drawn = [random.choice(self.contents) for _ in
-                       range(balls_to_draw)]
+        # balls_drawn = [random.choice(self.contents) for _ in
+        #                range(balls_to_draw)]
+        balls_drawn = []
+        for _ in range(balls_to_draw):
+            ball_drawn = random.choice(self.contents)
+            self.contents.remove(ball_drawn)
+            balls_drawn.append(ball_drawn)
         return balls_drawn
         # Should not go back into hat during draw
         # If draws exceed number of balls in hat, return all balls
