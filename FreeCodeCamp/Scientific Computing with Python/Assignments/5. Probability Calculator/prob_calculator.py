@@ -44,8 +44,9 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     counter = 0
     for _ in range(num_experiments):
         count = 0
+        # To avoid using same hat every iteration
         hat_copy = copy.deepcopy(hat)
-        balls_drawn = Counter(Hat.draw(hat_copy, num_balls_drawn))
+        balls_drawn = Counter(hat_copy.draw(num_balls_drawn))
         # Check if expected balls are in balls drawn
         for key in expected_balls.keys():
             # print(key, balls_drawn[key], expected_balls[key])
