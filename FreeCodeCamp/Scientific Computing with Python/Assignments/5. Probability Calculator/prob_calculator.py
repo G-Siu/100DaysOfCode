@@ -1,5 +1,6 @@
 import copy
 import random
+from collections import Counter
 
 # Determine probability of drawing certain balls randomly
 
@@ -11,6 +12,9 @@ class Hat:
         # one item for each ball in the hat
         self.contents = [colour for colour in self.colour_dict.keys() for _
                          in range(self.colour_dict[colour])]
+
+    def __repr__(self):
+        return str(self.contents)
 
     # Accepts argument as number of balls to be drawn
     def draw(self, balls_to_draw):
@@ -37,4 +41,13 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     # num_balls_drawn: Number of balls to be drawn
     # num_experiments: Number of experiments to perform (more runs, higher
     # accuracy
-    pass
+
+    count = 0
+    for iteration in range(num_experiments):
+        hat_copy = copy.deepcopy(hat)
+        balls_drawn = Counter(Hat.draw(hat_copy, num_balls_drawn))
+        # Check if expected balls are in balls drawn
+        if set(expected_balls.items()).issubset(set(balls_drawn.items())):
+            count += 1
+    probability = count / num_experiments
+    return probability
