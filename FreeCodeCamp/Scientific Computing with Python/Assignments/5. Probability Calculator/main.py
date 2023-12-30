@@ -8,10 +8,10 @@ probability = prob_calculator.experiment(
     expected_balls={"blue": 2,
                     "red": 1},
     num_balls_drawn=4,
-    num_experiments=10)
+    num_experiments=3000)
 print("Probability:", probability)
 
 # Run unit tests automatically
-# main(module='test_module', exit=False)
+main(module='test_module', exit=False)
 # print(hat.contents)
 # print(hat.draw(4))

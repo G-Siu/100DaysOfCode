@@ -56,6 +56,5 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
             count = 0
             break
         counter += count / len(expected_balls)
-        print(balls_drawn, counter)
     probability = counter / num_experiments
     return probability
