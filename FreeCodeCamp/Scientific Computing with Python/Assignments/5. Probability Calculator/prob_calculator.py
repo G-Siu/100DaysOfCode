@@ -29,8 +29,7 @@ class Hat:
                 balls_drawn.append(ball_drawn)
         # If draws exceed number of balls in hat, return all balls
         except IndexError:
-            print("Invalid: not enough balls in hat.\nProgram stopped.")
-            quit()
+            self.contents = balls_drawn
         return balls_drawn
 
 
@@ -42,12 +41,20 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     # num_experiments: Number of experiments to perform (more runs, higher
     # accuracy
 
-    count = 0
-    for iteration in range(num_experiments):
+    counter = 0
+    for _ in range(num_experiments):
+        count = 0
         hat_copy = copy.deepcopy(hat)
         balls_drawn = Counter(Hat.draw(hat_copy, num_balls_drawn))
         # Check if expected balls are in balls drawn
-        if set(expected_balls.items()).issubset(set(balls_drawn.items())):
+        for key in expected_balls.keys():
+            # print(key, balls_drawn[key], expected_balls[key])
             count += 1
-    probability = count / num_experiments
+            if key in balls_drawn and balls_drawn[key] >= expected_balls[key]:
+                continue
+            count = 0
+            break
+        counter += count / len(expected_balls)
+        print(balls_drawn, counter)
+    probability = counter / num_experiments
     return probability

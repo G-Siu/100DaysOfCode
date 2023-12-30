@@ -1,4 +1,3 @@
-# This entrypoint file to be used in development. Start by reading README.md
 import prob_calculator
 from unittest import main
 
@@ -8,10 +7,11 @@ probability = prob_calculator.experiment(
     hat=hat,
     expected_balls={"blue": 2,
                     "red": 1},
-    num_balls_drawn=4,
-    num_experiments=3000)
+    num_balls_drawn=13,
+    num_experiments=10)
 print("Probability:", probability)
 
 # Run unit tests automatically
 # main(module='test_module', exit=False)
 # print(hat.contents)
+# print(hat.draw(4))
