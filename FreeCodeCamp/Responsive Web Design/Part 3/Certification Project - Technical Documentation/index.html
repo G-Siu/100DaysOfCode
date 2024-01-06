@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
-        <title>Technical Documentation</title>
+        <title>Python Technical Documentation</title>
     </head>
     <body>
         <!-- 8.You can see a nav element with a corresponding id="navbar"-->
         <nav id="navbar">
             <!-- 9.The navbar element should contain one header element which contains text that describes the topic of the technical documentation-->
             <!-- 11.The header element in the #navbar must come before any link (a) elements in the navbar-->
-            <header>Technical Documentation</header>
+            <header>Python Technical Documentation</header>
+            <!-- 10.Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section-->
+            <!-- 12.Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")-->
+            <!-- 13.When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)-->
             <ul>
                 <li>
-                    <!-- 10.Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section-->
-                    <!-- 12.Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")-->
-                    <!-- 13.When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)-->
-                    <a class="nav-link" href="#1">1</a>
+                    <a class="nav-link" href="#Introduction">Introduction</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#2">2</a>
+                    <a class="nav-link" href="#Hello_World">Hello World</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#3">3</a>
+                    <a class="nav-link" href="#Variables">Variables</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#4">4</a>
+                    <a class="nav-link" href="#Data_Types">Data Types</a>
                 </li>
                 <li>
                     <a class="nav-link" href="#5">5</a>
@@ -37,40 +37,104 @@
         <main id="main-doc">
             <!-- 2.Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five-->
             <!-- 3.The first element within each .main-section should be a header element, which contains text that describes the topic of that section.-->
-            <section class="main-section" id="1">
+            <section class="main-section" id="Introduction">
                 <!-- 4.Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")-->
-                <header id="1">1</header>
+                <header>Introduction</header>
                 <!-- 5.The .main-section elements should contain at least ten p elements total (not each)-->
-                <p></p>
-                <p></p>
+                <p>
+                    Python is a popular high-level, versatile programming
+                    language known for its simplicity and readability. It has a
+                    wide range of uses from web development, to data science and
+                    artificial intelligence, etc.<br />Some key characterstics
+                    and features include:
+                </p>
+                <ol>
+                    <!-- 7.The .main-section elements should contain at least five li items total (not each)-->
+                    <li>
+                        <b>Readibility</b>: Python's syntax is easily readable,
+                        and resembles the English language structure. The
+                        readibility reduces the cost of development and
+                        maintenance.
+                    </li>
+                    <li>
+                        <b>Versatility</b>: Python supports multiple programming
+                        paradigms, such as object-oriented, and functional,
+                        giving developers a variety of approaches to reach a
+                        solution for their projects.
+                    </li>
+                    <li>
+                        <b>Interpreted & Interactive</b>: As an interpreted
+                        language, code is executed line-by-line by an
+                        interpreter, enabling quick development and debugging.
+                        The language comes with interactive shells for testing
+                        code.
+                    </li>
+                    <li>
+                        <b>Rich Standard Library</b>: Python contains a vast
+                        library of modules and functions as standard, reducing
+                        the need for external modules.
+                    </li>
+                    <li>
+                        <b>Extensive Ecosystem</b>: Third party packages and
+                        frameworks can be leveraged by developers. These include
+                        Django and Flask for web developments, NumPy and Pandas
+                        for data analysis, Tensorflow and PyTorch for machine
+                        learning, and more.
+                    </li>
+                    <li>
+                        <b>Platform Independence</b>: Largely platform
+                        independent code means Python programs is compatible on
+                        various operating systems.
+                    </li>
+                    <li>
+                        <b>Community & Support</b>: The Python community is
+                        large and active, contributing to its growth, with
+                        support coming from numerous resources and
+                        documentation.
+                    </li>
+                    <li>
+                        <b>Open Source</b>: Python is open source, encouraging
+                        developers to collaborate, contribute, expand, and
+                        improve.
+                    </li>
+                </ol>
+            </section>
+            <section class="main-section" id="Hello_World">
+                <header>Hello World</header>
+                <p>
+                    To start your coding journey in a programming language, it
+                    is common to start with displaying "Hello World".
+                </p>
                 <!-- 6.The .main-section elements should contain at least five code elements total (not each)-->
-                <code></code>
-                <!-- 7.The .main-section elements should contain at least five li items total (not each)-->
-                <li></li>
+                <code>print("Hello World")</code>
             </section>
-            <section class="main-section" id="2">
-                <header id="2">2</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <li></li>
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
+                <p>
+                    You can store values by assigning them to a variable.
+                    Variables are useful for values that are required on
+                    multiple occassions. Variables should follow a naming
+                    convention commonly used in Python. This may be in
+                    camelCase, where the initial letter is lowercase, and the
+                    following words are capitalised. However, according to PEP 8
+                    Style Guide for Python, variables (and functions) should
+                    follow the snake_case, unless camelCase is required for
+                    context to retain backwards compatibility. An appropriate
+                    identifier should be concise and clear as to the purpose of
+                    the variable for future reference.<br />
+                    An example is given below:
+                </p>
+                <code>house_number = 11</code>
             </section>
-            <section class="main-section" id="3">
-                <header id="3">3</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <li></li>
-            </section>
-            <section class="main-section" id="4">
-                <header id="4">4</header>
+            <section class="main-section" id="Data_Types">
+                <header>Data Types</header>
                 <p></p>
                 <p></p>
                 <code></code>
                 <li></li>
             </section>
             <section class="main-section" id="5">
-                <header id="5">5</header>
+                <header>5</header>
                 <p></p>
                 <p></p>
                 <code></code>
