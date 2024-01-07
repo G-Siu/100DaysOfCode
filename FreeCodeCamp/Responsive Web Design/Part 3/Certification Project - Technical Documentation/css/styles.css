@@ -1,0 +1,76 @@
+*:not(code) {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 1.2rem;
+    padding: 1px 1.2rem;
+    text-align: justify;
+}
+
+code {
+    display: block;
+    background-color: #eeeeee;
+    margin: 1px 1.2rem;
+    padding: 1.25rem 2px;
+}
+
+header {
+    font-weight: bold;
+    font-size: 32px;
+    padding: 1.5rem auto;
+    text-align: center;
+    margin: 5px;
+}
+
+/* 14.On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user*/
+/* 15.Your technical documentation should use at least one media query*/
+@media only screen and(max-width: 800px) {
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 200px;
+        border: none;
+        border-bottom: 1px solid;
+        z-index: 1;
+    }
+}
+
+#navbar {
+    position: fixed;
+    min-width: 300px;
+    left: 0px;
+    width: 320px;
+    height: 100%;
+    border-right: 1px solid;
+}
+
+#navbar li {
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 5px 30px 5px 0px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    #main-doc {
+        position: relative;
+        margin: 200px 0 0 0;
+    }
+}
+
+#main-doc {
+    margin: absolute;
+    margin-left: 320px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
