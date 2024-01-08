@@ -16,37 +16,48 @@ code {
     padding: 1.25rem 2px;
 }
 
-header {
+header:not(nav header) {
     font-weight: bold;
     font-size: 32px;
     padding: 1.5rem auto;
+    margin-top: 20px;
+    margin-left: 1rem;
+}
+
+nav header {
+    font-weight: bold;
+    font-size: 32px;
     text-align: center;
-    margin: 5px;
 }
 
 /* 14.On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user*/
 /* 15.Your technical documentation should use at least one media query*/
-@media only screen and(max-width: 800px) {
+@media only screen and (max-width: 800px) {
     #navbar {
         position: absolute;
         top: 0;
+        left: 0;
         padding: 0;
         margin: 0;
-        width: 100%;
         max-height: 200px;
         border: none;
         border-bottom: 1px solid;
         z-index: 1;
+        overflow-y: auto;
     }
 }
 
 #navbar {
+    display: block;
     position: fixed;
-    min-width: 300px;
-    left: 0px;
     width: 320px;
+    left: 0px;
     height: 100%;
     border-right: 1px solid;
+}
+
+#navbar a {
+    padding: 15px 20px;
 }
 
 #navbar li {
@@ -59,18 +70,26 @@ header {
     text-decoration: none;
     color: black;
     cursor: pointer;
+    border-top: 0.5px solid;
 }
 
 @media only screen and (max-width: 800px) {
     #main-doc {
         position: relative;
-        margin: 200px 0 0 0;
+        margin-top: 225px;
+        width: 100%;
     }
 }
 
 #main-doc {
+    display: block;
     margin: absolute;
     margin-left: 320px;
     margin-bottom: 50px;
     padding: 0 20px;
+}
+
+#Data_Types li,
+#Operators li {
+    padding: 1px 1.2rem;
 }
