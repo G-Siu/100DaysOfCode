@@ -2,34 +2,73 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  #header {
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#email {
+    display: inherit;
+    margin: 10px 0;
+    padding: 5px;
+    width: 300px;
+}
+
+#form {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+#header {
     /* 13.The navbar should always be at the top of the viewport */
     display: flex;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  #header-img {
+}
+
+#header-img {
     max-width: 300px;
-  }
-  
-  #nav-bar ul {
+}
+
+main {
+    padding-top: 50px;
+}
+
+#nav-bar ul {
     width: 40vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-  }
-  
-  #nav-bar li {
+}
+
+#nav-bar li {
     list-style: none;
-  }
-  /* 9.The #email input field should have placeholder text to let users know what the field is for */
-  
-  
-  
-  /* 14.Your product landing page should have at least one media query */
-  
-  /* 15.Your product landing page should utilize CSS flexbox at least once */
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#submit {
+    background-color: orange;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* 14.Your product landing page should have at least one media query */
+
+/* 15.Your product landing page should utilize CSS flexbox at least once */

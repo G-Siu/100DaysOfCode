@@ -28,25 +28,33 @@
                     <a href="#video">Video</a>
                 </li>
                 <li>
-                    <a>Pricing</a>
+                    <a href="#pricing">Pricing</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <div id="top">
         <!-- 7.Your landing page has a form element with a corresponding id="form"-->
         <!-- 12.When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)-->
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <h1>Handcrafted, home-made masterpieces</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" required>
             <!-- 8.Within the form, there is an input field with id="email" where you can enter an email address-->
+            <!-- 9.The #email input field should have placeholder text to let users know what the field is for -->
             <!-- 10.The #email input field uses HTML5 validation to confirm that the entered text is an email address-->
-            <input id="email">
+            <input id="email" placeholder="Email address" type="email">
             <!-- 11.Within the form, there is a submit input with a corresponding id="submit"-->
-            <input type="submit">
+            <input id="submit" type="submit" value="Sign Up">
         </form>
+    </div>
+    <main>
         <!-- 6.You can watch an embedded product video with id="video"-->
         <iframe id="video">
 
         </iframe>
+        <section id="pricing">
+
+        </section>
+    </main>
 </body>
 
 </html>
