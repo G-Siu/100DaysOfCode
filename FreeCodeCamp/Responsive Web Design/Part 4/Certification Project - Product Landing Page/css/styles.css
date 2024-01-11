@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --color: darkorange;
 }
 
 a {
@@ -16,26 +17,49 @@ a {
     width: 300px;
 }
 
+#features {
+    display: grid;
+    gap: 3rem;
+    margin: auto;
+    padding: 50px 0 100px 0;
+    max-width: 600px;
+    width: 100%;
+}
+
 #form {
     display: block;
     align-items: center;
     justify-content: center;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    gap: 3rem;
+}
+
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 #header {
     /* 13.The navbar should always be at the top of the viewport */
     display: flex;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 
 #header-img {
     max-width: 300px;
+}
+
+#icon {
+    filter: drop-shadow(0px 1000px 0 var(--color));
+    transform: translateY(-1000px);
+    max-width: 50px;
 }
 
 main {
@@ -59,16 +83,51 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 100px;
 }
 
 #submit {
-    background-color: orange;
+    background-color: var(--color);
     border: none;
     padding: 5px 10px;
     font-weight: bold;
 }
 
+#submit:hover {
+    cursor: pointer;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video {
+    max-width: 550px;
+    width: 100%;
+    height: 309px;
+    overflow: clip;
+    overflow-clip-margin: content-box;
+}
 /* 14.Your product landing page should have at least one media query */
+@media (max-width: 500px) {
+    #nav-bar ul {
+        flex-direction: column;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    #nav-bar ul {
+        padding-left: 0;
+        width: 100%;
+        margin: auto;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+}
 
 /* 15.Your product landing page should utilize CSS flexbox at least once */

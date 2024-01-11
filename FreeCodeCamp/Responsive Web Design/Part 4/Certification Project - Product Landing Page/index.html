@@ -22,13 +22,13 @@
             <ul>
                 <li>
                     <!-- 5.When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page-->
-                    <a href="#features">Features</a>
+                    <a href="#features" class="nav-link">Features</a>
                 </li>
                 <li>
-                    <a href="#video">Video</a>
+                    <a href="#video" class="nav-link">Video</a>
                 </li>
                 <li>
-                    <a href="#pricing">Pricing</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
                 </li>
             </ul>
         </nav>
@@ -47,10 +47,38 @@
         </form>
     </div>
     <main>
+        <section id="features">
+            <div class="grid">
+                <img id="icon"
+                    src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/512/fire-flame-curved-256.png" />
+                <div class="features-description">
+                    <h2>Premium Materials</h2>
+                    <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity
+                        of your purchase.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <img id="icon" src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/640/truck-256.png" />
+                <div class="features-description">
+                    <h2>Fast Shipping</h2>
+                    <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide
+                        free returns if you are not satisfied.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <img id="icon" src="https://cdn0.iconfinder.com/data/icons/quality-control-7/24/3-01-256.png" />
+                <div class="features-description">
+                    <h2>Quality Assurance</h2>
+                    <p>For every purchase you make, we will ensure there are no damages or faults and we will check and
+                        test the pitch of your instrument.</p>
+                </div>
+            </div>
+        </section>
         <!-- 6.You can watch an embedded product video with id="video"-->
-        <iframe id="video">
-
-        </iframe>
+        <section class="video">
+            <iframe id="video" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0"
+                frameborder="0" allowfullscreen>
+        </section>
         <section id="pricing">
 
         </section>
