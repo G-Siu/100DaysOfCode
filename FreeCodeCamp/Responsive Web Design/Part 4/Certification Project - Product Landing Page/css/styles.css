@@ -1,4 +1,5 @@
 * {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,6 +28,24 @@ a {
     width: 100%;
 }
 
+footer {
+    background-color: #eee;
+}
+
+footer li {
+    margin-left: 20px;
+}
+
+footer span {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #form {
     display: block;
     align-items: center;
@@ -52,15 +71,20 @@ h3 {
     /* 13.The navbar should always be at the top of the viewport */
     /* 15.Your product landing page should utilize CSS flexbox at least once */
     display: flex;
-    padding: 10px;
+    padding: 20px;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 100%;
+    background-color: white;
 }
 
 #header-img {
     max-width: 300px;
+}
+
+li {
+    list-style: none;
 }
 
 #icon {
@@ -80,13 +104,13 @@ main {
     justify-content: space-around;
 }
 
-#nav-bar li {
-    list-style: none;
-}
-
 #pricing {
-    display: block;
-    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 50px 0 50px 0;
+    max-width: 930px;
+    margin: auto;
 }
 
 #top {
@@ -101,6 +125,7 @@ main {
 .trombone {
     max-width: 300px;
     text-align: center;
+    border: 1px solid black;
 }
 
 .trombone h2 {
@@ -116,6 +141,8 @@ main {
     font-size: larger;
     font-weight: normal;
     padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 #submit {
@@ -161,5 +188,16 @@ main {
 
     #header {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    #pricing {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .trombone {
+        width: 100%;
+        max-width: 300px;
     }
 }
