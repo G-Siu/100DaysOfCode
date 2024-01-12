@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     --color: darkorange;
+    --color2: #ffcd10;
 }
 
 a {
@@ -42,8 +43,14 @@ h1 {
     font-size: 2rem;
 }
 
+h3 {
+    background-color: #eee;
+    padding: 15px 0;
+}
+
 #header {
     /* 13.The navbar should always be at the top of the viewport */
+    /* 15.Your product landing page should utilize CSS flexbox at least once */
     display: flex;
     padding: 10px;
     justify-content: space-around;
@@ -77,6 +84,11 @@ main {
     list-style: none;
 }
 
+#pricing {
+    display: block;
+    padding-top: 50px;
+}
+
 #top {
     display: flex;
     flex-direction: column;
@@ -86,15 +98,37 @@ main {
     padding-top: 100px;
 }
 
+.trombone {
+    max-width: 300px;
+    text-align: center;
+}
+
+.trombone h2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.trombone p {
+    padding: 5px 0 5px 0;
+}
+
+.trombone #submit {
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 20px;
+}
+
 #submit {
-    background-color: var(--color);
+    background-color: var(--color2);
     border: none;
     padding: 5px 10px;
     font-weight: bold;
+    transition: all 0.8s ease;
 }
 
 #submit:hover {
     cursor: pointer;
+    background-color: var(--color);
 }
 
 .video {
@@ -129,5 +163,3 @@ main {
         flex-direction: column;
     }
 }
-
-/* 15.Your product landing page should utilize CSS flexbox at least once */
