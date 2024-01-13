@@ -1,0 +1,40 @@
+:root {
+    --color-blue: #34497f;
+    --color-dark-blue: #2f374d;
+    --color-light-blue: #9eadd4;
+    --color-white: #f2f2f2;
+    --color-grey: #c9d9ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    background-color: var(--color-blue);
+    padding: 20px 0;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar li {
+    font-size: large;
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* 9.Your portfolio should have at least one media query */
+
+/* 10.The height of the welcome section should be equal to the height of the viewport */
+
+/* 11.The navbar should always be at the top of the viewport */
