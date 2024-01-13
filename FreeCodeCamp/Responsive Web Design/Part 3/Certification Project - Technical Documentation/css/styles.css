@@ -97,4 +97,5 @@ nav header {
 #Data_Types li,
 #Operators li {
     padding: 1px 1.2rem;
+    list-style: none;
 }
