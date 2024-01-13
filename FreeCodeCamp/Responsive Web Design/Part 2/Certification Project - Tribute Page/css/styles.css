@@ -13,7 +13,8 @@
 
 #image {
     align-items: center;
-    max-width: 100%;
+    max-width: 500px;
+    margin: auto;
     height: auto;
 }
 
@@ -41,4 +42,5 @@ section p {
     border-top: solid;
     max-width: 600px;
     margin: 0 auto;
+    padding: 10px 0;
 }
