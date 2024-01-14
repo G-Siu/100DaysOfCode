@@ -4,6 +4,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Bitter&family=Roboto:wght@300;400&display=swap""
+        rel="stylesheet">
         <title>Personal Portfolio</title>
     </head>
     <body>
@@ -28,20 +33,100 @@
         <section id="welcome-section">
             <!-- 2.The welcome section should have an h1 element that contains text-->
             <h1>Hello there! I am Gary</h1>
-            <p>a web developer(?)</p>
+            <p>a web developer (?)</p>
         </section>
         <!-- 3.Your portfolio should have a projects section with an id of projects-->
         <section id="projects">
-            <!-- 4.The projects section should contain at least one element with a class of project-tile to hold a project-->
-            <div class="project-tile">
-                <!-- 5.The projects section should contain at least one link to a project-->
-                <a href=""></a>
+            <h2>These are some of my practice projects</h2>
+            <div class="grid">
+                <!-- 4.The projects section should contain at least one element with a class of project-tile to hold a project-->
+                <div class="project-tile">
+                    <!-- 5.The projects section should contain at least one link to a project-->
+                    <a href="https://codepen.io/G-Siu/pen/OJqbjKN">
+                        <img
+                            class="project-image"
+                            src="https://codepen.io/G-Siu/pen/OJqbjKN/image/small.png"
+                            alt="tribute page project"
+                        />
+                        <p class="project-name">
+                            <span><</span>
+                            Tribute Page
+                            <span>/></span>
+                        </p>
+                    </a>
+                </div>
+                <div class="project-tile">
+                    <a href="https://codepen.io/G-Siu/pen/MWxbzjd">
+                        <img
+                            class="project-image"
+                            src="https://codepen.io/G-Siu/pen/MWxbzjd/image/small.png"
+                            alt="survey form project"
+                        />
+                        <p class="project-name">
+                            <span><</span>
+                            Survey Form
+                            <span>/></span>
+                        </p>
+                    </a>
+                </div>
+                <div class="project-tile">
+                    <a href="https://codepen.io/G-Siu/pen/dyrOQON">
+                        <img
+                            class="project-image"
+                            src="https://codepen.io/G-Siu/pen/dyrOQON/image/small.png"
+                            alt="technical documentation project"
+                        />
+                        <p class="project-name">
+                            <span><</span>
+                            Technical Documentation
+                            <span>/></span>
+                        </p>
+                    </a>
+                </div>
+                <div class="project-tile">
+                    <a href="https://codepen.io/G-Siu/pen/yLwVQVr">
+                        <img
+                            class="project-image"
+                            src="https://codepen.io/G-Siu/pen/yLwVQVr/image/small.png"
+                            alt="product landing page project"
+                        />
+                        <p class="project-name">
+                            <span>< </span>
+                            Product Landing Page
+                            <span> /></span>
+                        </p>
+                    </a>
+                </div>
             </div>
+            <a class="codepen" href="https://codepen.io/G-Siu" target="_blank">
+                My CodePen
+            </a>
         </section>
         <section id="contact">
-            <div id="contact-icons">
-                <!-- 8.The navbar should contain at least one link that you can click on to navigate to different sections of the page-->
-                <a href=""></a>
+            <div id="contact-links">
+                <!-- 8.Your portfolio should have a link with an id of profile-link, which opens your GitHub or freeCodeCamp profile in a new tab-->
+                <a
+                    id="profile-link"
+                    href="https://github.com/G-Siu"
+                    target="_blank"
+                >
+                    <img
+                        id="contact-icons"
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-256.png"
+                    />
+                    <p style="white-space: pre">Github</p>
+                </a>
+                <a
+                    id="profile-link"
+                    href="https://github.com/G-Siu"
+                    target="_blank"
+                >
+                    <img
+                        id="contact-icons"
+                        src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Codepen-256.png"
+                    />
+                    <p style="white-space: pre">CodePen</p>
+                </a>
             </div>
         </section>
     </body>
