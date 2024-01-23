@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Roman Numeral Converter</title>
   </head>
   <body>
     <h1>ROMAN NUMERAL CONVERTER</h1>
-    <form id="form">
+    <form id="form" onSubmit="return false;">
       <fieldset>
         <!-- 1.You should have an input element with an id of number-->
         <label for="number">Enter a Number:</label>
@@ -18,7 +18,7 @@
       </fieldset>
     </form>
     <!-- 3.You should have a div element with an id of output-->
-    <div id="output"></div>
-    <script src="script.js"></script>
+    <div id="output" class="hidden"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
