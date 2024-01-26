@@ -69,9 +69,18 @@ label {
     padding: 10px;
 }
 
+.result {
+    margin: 10px 0;
+    font-size: larger;
+}
+
 #results-div {
     height: 250px;
+    max-width: 190px;
+    padding: 10px 0;
+    margin: auto;
     width: 100%;
+    overflow-y: auto;
 }
 
 #user-input {
@@ -79,4 +88,6 @@ label {
     border-radius: 10px;
     border: 1px solid black;
     margin: 10px auto;
+    font-size: larger;
+    max-width: 200px;
 }
