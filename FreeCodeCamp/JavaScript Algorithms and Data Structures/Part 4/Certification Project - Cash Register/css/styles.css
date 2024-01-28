@@ -1,0 +1,122 @@
+:root {
+    --white: #fff;
+    --blue: rgb(108, 191, 247);
+    --black: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #010124;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: var(--white);
+    margin: 30px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 10px;
+    background-image: linear-gradient(rgb(231, 194, 91), orange);
+    border: 3px solid linear-gradient(orange, darkorange);
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+label {
+    color: var(--white);
+    display: block;
+    margin: 5px;
+}
+
+.register {
+    margin: 100px 0;
+    position: relative;
+}
+
+#change-in-drawer {
+    position: absolute;
+    background-color: var(--white);
+    width: 175px;
+    height: 220px;
+    right: 15px;
+    top: 20px;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 140%;
+}
+
+#display {
+    background-color: var(--blue);
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: -80px;
+    left: 40px;
+}
+
+#display-arm {
+    background-color: var(--blue);
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    top: -35px;
+    left: 60px;
+}
+
+#drawer {
+    background-color: var(--blue);
+    width: 300px;
+    height: 50px;
+    margin: 10px 0;
+    display: flex;
+}
+
+#handle {
+    background-color: var(--black);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+#keys {
+    background-color: var(--black);
+    width: 20px;
+    height: 20px;
+}
+
+#keypad {
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    gap: 4px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+#register-body {
+    position: relative;
+    background-color: var(--blue);
+    width: 300px;
+    height: 250px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+}
