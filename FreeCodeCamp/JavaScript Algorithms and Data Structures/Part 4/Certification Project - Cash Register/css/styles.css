@@ -71,6 +71,19 @@ label {
     position: absolute;
     top: -80px;
     left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#display p {
+    background-color: var(--black);
+    color: var(--white);
+    width: 90%;
+    margin: auto;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #display-arm {
