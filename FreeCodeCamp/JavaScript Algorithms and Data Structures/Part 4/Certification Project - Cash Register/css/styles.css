@@ -35,6 +35,13 @@ button {
     cursor: pointer;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 input {
     padding: 5px;
     margin: 5px;
@@ -49,6 +56,18 @@ label {
 .register {
     margin: 100px 0;
     position: relative;
+}
+
+#change-due {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    line-height: 130%;
+}
+
+#change-due p {
+    color: var(--white);
+    text-align: left;
 }
 
 #change-in-drawer {
