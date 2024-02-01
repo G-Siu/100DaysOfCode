@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Pokémon Search App</title>
+    </head>
+    <body>
+        <main>
+            <h1>Pokémon Search App</h1>
+            <div class="pokemon-card">   
+                <form>    
+                    <label for="search-input">Search for Pokémon Name or ID:</label>
+                    <div class="input-button">
+                        <!-- 1.You should have an input element with an id of search-input-->
+                        <input id="search-input" type="text" name="pokémon" required/>
+                        <!-- 2.You should have a button element with an id of search-button-->
+                        <button id="search-button">Search</button>
+                    </div>
+                </form>
+                <div class="results-top">    
+                    <div class="name-id">
+                        <!-- 3.You should have an element with an id of pokemon-name-->
+                        <span id="pokemon-name"></span>
+                        <!-- 4.You should have an element with an id of pokemon-id-->
+                        <span id="pokemon-id"></span>
+                    </div>
+                    <div class="weight-height">
+                        <!-- 5.You should have an element with an id of weight-->
+                        <span id="weight">Weight: 69</span>
+                        <!-- 6.You should have an element with an id of height-->
+                        <span id="height">Height: 7</span>
+                    </div>
+                    <div class="sprite">
+                        <img id="sprite"/>
+                    </div>
+                    <div id="types">
+                        <!-- 7.You should have an element with an id of types-->
+                        <span></span>
+                    </div>
+                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Base</th>
+                            <th>Stats</th>
+                        </tr>
+                        <tr>
+                            <td>HP:</td>
+                            <!-- 8.You should have an element with an id of hp-->
+                            <td id="hp"></td>
+                        </tr>
+                        <tr>
+                            <td>Attack:</td>
+                            <!-- 9.You should have an element with an id of attack-->
+                            <td id="attack"></td>
+                        </tr>
+                        <tr>
+                            <td>Defense:</td>
+                            <!-- 10.You should have an element with an id of defense-->
+                            <td id="defense"></td>
+                        </tr>
+                        <tr>
+                            <td>Sp. Attack:</td>
+                            <!-- 11.You should have an element with an id of special-attack-->
+                            <td id="special-attack"></td>
+                        </tr>
+                        <tr>
+                            <td>Sp. Defense:</td>
+                            <!-- 12.You should have an element with an id of special-defense-->
+                            <td id="special-defense"></td>
+                        </tr>
+                        <tr>
+                            <td>Speed:</td>
+                            <!-- 13.You should have an element with an id of speed-->
+                            <td id="speed"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+</html>

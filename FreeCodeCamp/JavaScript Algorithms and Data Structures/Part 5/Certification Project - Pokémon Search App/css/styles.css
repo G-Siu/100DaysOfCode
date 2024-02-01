@@ -1,0 +1,139 @@
+:root {
+    --black: #020202;
+    --white: #fff;
+    --purple: #6b027c;
+    --grey: #efefef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--white);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+body {
+    background-color: #1c1c35
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+th, td{
+    padding: 10px; 
+    background-color: var(--purple);
+    border: 2px solid;
+}
+
+button {
+    background-color: var(--purple);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #65288d;
+}
+
+button:active {
+    background-color: var(--purple);
+}
+
+form {
+    margin: 10px;
+}
+
+input {
+    padding: 10px;
+    color: var(--black)
+}
+
+label {
+    color: var(--black)
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+#input-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sprite {
+    width: 200px
+}
+
+#types {
+    min-height: 30px;
+    width: 75px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: smaller;
+}
+
+@media screen and (min-width: 500px) {
+    .pokemon-card {
+        width: 400px;
+    }
+}
+
+.pokemon-card {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgb(180, 180, 180, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-id {
+    height: 25px;
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.results-top {
+    width: 99%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--grey);
+}
+
+.results-top * {
+    color: var(--black);
+}
+
+.sprite {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.weight-height {
+    height: 25px;
+}
