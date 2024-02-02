@@ -77,15 +77,14 @@ table {
 }
 
 #sprite {
-    width: 200px
+    width: 200px;
 }
 
 #types {
-    min-height: 30px;
-    width: 75px;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-size: smaller;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
 }
 
 @media screen and (min-width: 500px) {
@@ -107,8 +106,9 @@ table {
 
 .name-id {
     height: 25px;
-    font-size: larger;
     text-transform: uppercase;
+    font-size: larger;
+    color: var(--black);
 }
 
 .results-top {
@@ -134,8 +134,21 @@ table {
     justify-content: center;
 }
 
+.types {
+    min-height: 30px;
+    width: 75px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: smaller;
+    text-transform: uppercase;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .weight-height {
     height: 25px;
+    font-size: smaller;
 }
 
 

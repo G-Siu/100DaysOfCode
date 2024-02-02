@@ -2,10 +2,16 @@ const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const pokemonName = document.getElementById("pokemon-name");
 const pokemonId = document.getElementById("pokemon-id");
-const weight = document.getElementById("weight");
-const height = document.getElementById("height");
-const sprite = document.getElementsByClassName("sprite");
-const types = document.getElementById("types");
+const weightValue = document.getElementById("weight");
+const heightValue = document.getElementById("height");
+const sprite = document.querySelector(".sprite");
+const typesValue = document.getElementById("types");
+const hpValue = document.getElementById("hp");
+const attackValue = document.getElementById("attack");
+const defenseValue = document.getElementById("defense");
+const specialAttackValue = document.getElementById("special-attack");
+const specialDefenseValue = document.getElementById("special-defense");
+const speedValue = document.getElementById("speed");
 
 let pokemonCheck = [];
 
@@ -25,25 +31,40 @@ const formatInput = () => {
     return regexInput;
 }
 
-const getApi = (pokemon) => {
-    fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemon}`)
-    .then((res) => res.json())
-    .then((list) => {
-        display(list);
-    })
-    .catch((err) => {
-        alert("Pokémon not found")
-    })
+const getApi = async (pokemon) => {
+    try {
+        const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemon}`);
+        if (!res.ok) {
+            alert("Pokémon not found");
+            throw new Error("Couldn't fetch data");
+            
+        }
+        const data = await res.json();
+        display(data);
+    }
+    catch(err) {
+        console.error("General error:", err);
+    }
 }
 
 const display = (obj) => {
+    typesValue.innerHTML = ""
     const { _experience, height, id, name, _order, sprites, stats, types, weight } = obj;
-    spriteFront = sprites["front_default"]
-    sprite.innerHTML += `<img id="sprite" src="${spriteFront}" alt="${name} front default sprite">`
-    // console.log(obj)
-    // console.log(sprites)
-    // console.log(stats)
-    // console.log(types)
+    pokemonName.textContent = `${name}`;
+    pokemonId.textContent = `#${id}`;
+    weightValue.textContent = `Weight: ${weight}`;
+    heightValue.textContent = `Height: ${height}`;
+    sprite.innerHTML = `<img id="sprite" src="${sprites["front_default"]}" alt="${name} front default sprite">`
+    for (let i = 0; i < types.length; i++) {
+        typesValue.innerHTML += `<span class="types ${types[i]["type"]["name"]}">${types[i]["type"]["name"]}</span>`
+    }
+    const [ hp, attack, defense, specialAttack, specialDefense, speed ] = stats;
+    hpValue.textContent = hp["base_stat"];
+    attackValue.textContent = attack["base_stat"];
+    defenseValue.textContent = defense["base_stat"];
+    specialAttackValue.textContent = specialAttack["base_stat"];
+    specialDefenseValue.textContent = specialDefense["base_stat"];
+    speedValue.textContent = speed["base_stat"];
 }
 
 
@@ -51,5 +72,4 @@ const checkInput = () => {
     getApi(formatInput());
 }
 
-searchButton.addEventListener("click", checkInput)
-
+searchButton.addEventListener("click", checkInput);
