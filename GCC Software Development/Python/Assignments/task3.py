@@ -11,7 +11,7 @@ def coursework():
         # Catch ValueErrors such as strings
         try:
             # Input student coursework mark
-            mark = float(input("Enter coursework mark: "))
+            mark = float(input("Enter coursework mark (0-60): "))
         except ValueError:
             print("Please use numbers.")
     return mark
@@ -26,7 +26,7 @@ def prelim():
         # Catch ValueErrors such as strings
         try:
             # Input student prelim mark
-            mark = float(input("Enter prelim mark: "))
+            mark = float(input("Enter prelim mark (0-90): "))
         except ValueError:
             print("Please use numbers.")
     return mark
@@ -44,16 +44,16 @@ def display_grade(coursework, prelim):
     mark_percentage = calculate_percentage(coursework, prelim)
     # IF conditionals to determine grade achieved
     if mark_percentage >= 70:
-        return f"Student achieved grade A with total mark of {mark_percentage}"
+        return f"Student achieved grade A with total mark of {mark_percentage}."
     elif mark_percentage >= 60:
-        return f"Student achieved grade B with total mark of {mark_percentage}"
+        return f"Student achieved grade B with total mark of {mark_percentage}."
     elif mark_percentage >= 50:
-        return f"Student achieved grade C with total mark of {mark_percentage}"
+        return f"Student achieved grade C with total mark of {mark_percentage}."
     elif mark_percentage >= 45:
-        return f"Student achieved grade D with total mark of {mark_percentage}"
+        return f"Student achieved grade D with total mark of {mark_percentage}."
     else:
         return (f"Student failed to achieve a grade with total mark of "
-                f"{mark_percentage}")
+                f"{mark_percentage}.")
 
 
 def main():
