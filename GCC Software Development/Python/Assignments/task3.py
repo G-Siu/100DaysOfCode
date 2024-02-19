@@ -1,5 +1,5 @@
 # Author: Gary Siu
-# Date: 5th Feb 2024
+# Date: 18th Feb 2024
 # Description: Calculate student grade from coursework and prelim marks
 
 # Function to return coursework marks
