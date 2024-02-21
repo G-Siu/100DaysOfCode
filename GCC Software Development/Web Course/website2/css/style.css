@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bk-white {
+    background-color: white;
+}
+
+.bk-light-grey {
+    background-color: rgb(249, 249, 249);
+}
+
+body {
+    max-width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+header a {
+    width: 10%;
+}
+
+header a img {
+    width: 100%;
+}
+
+header h1 {
+    width: 20%;
+    text-align: center;
+}
+
+nav {
+    width: 70%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover {
+    color: red;
+}
+
+footer {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.wrap {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding: 16px;
+}
+
+hr {
+    color: lightgrey;
+    width: calc(100% - 32px);
+    margin: 16px auto;
+}
+
+.wrap h1, .wrap p {
+    font-size: 32px;
+}
+
+.wrap p {
+    color: gray;
+}
+
+.button {
+    display: inline-block;
+    padding: .75rem 2.25rem;
+    background: #ce0058;
+    border: 2px solid #ce0058;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.3333333333;
+    text-align: center;
+    border-radius: 35px 35px 35px 35px;
+    padding: .75rem 2.25rem;
+    margin-top: 16px;
+}
+
+.button p {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    padding: 32px 20px;
+}
+
+.block-img {
+    width: 60%;
+}
+
+.block-img img {
+    width: 100%;
+}
+
+.block-content {
+    width: 40%;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.block-content h1 {
+    padding-bottom: 48px;
+}
+
+.block-content > p {
+    padding-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+    border-top: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.card-content {
+    padding: 16px;
+    font-size: 20px;
+}
+
+.card-image {
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.card-image img:hover {
+    transform:scale(1.1);
+    transition: .3s ease-in-out;
+}

@@ -1,0 +1,80 @@
+Scenario
+
+We are required to get the name of the adult and then the number of children that they have.
+Once we find out the number of children, we ask them how many tickets they need.
+Each ticket is £10. Print the total cost of the tickets.  If number of tickets required is greater 
+than the number of children display an error message.
+
+Algorithm (Pseudocode)
+
+
+SET ticket to 10
+PRINT Please enter name
+GET name
+PRINT How many children do you have?
+GET children
+PRINT How many tickets do you need?
+GET tickets
+IF tickets greater than children
+   PRINT Error
+cost = tickets * ticket
+PRINT Total cost is {cost}
+
+Python
+
+ticket = 10
+print("Please enter name : ")
+name = input()
+print("How many children do you have ? ")
+children = int(input())
+print("How many tickets ? ")
+tickets = int(input())
+if tickets > children:
+    print("Error")
+cost = tickets * ticket
+print(f"Total cost is {cost}")
+
+
+Scenario
+
+Ask for students mark which is out of 0 to 100, then calculate grade.  If the entered grade is 
+less than 0 or greater than 100 then display an error message.  Then display grade.
+A >= 70
+B >= 60
+C >= 50
+Less than 50 is a Fail
+
+Pseudocode
+
+PRINT Enter students mark
+DO
+   INPUT mark
+WHILE mark < 0 OR mark > 100
+IF mark >= 70
+    grade =  A
+ELSE IF mark >= 60
+    grade = B
+ELSE IF mark >= 50
+    grade = C
+ELSE
+    grade = Fail
+
+PRINT grade
+
+PYTHON
+
+print("Please enter mark : ")
+mark = 0
+grade = ""
+while mark < 0 or mark > 100:
+    mark = int(input())
+if mark >= 70:
+    grade = "A"
+elif mark >= 60:
+    grade = "B"
+elif mark >= 50:
+    grade = "C"
+else:
+    grade = "Fail"
+
+print(grade)

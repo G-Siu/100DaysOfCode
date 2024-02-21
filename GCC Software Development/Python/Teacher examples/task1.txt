@@ -1,0 +1,27 @@
+Task 1:
+Write an algorithm using an appropriate design notation which will input one student’s
+coursework mark and prelim mark and calculate and display their percentage and
+grade
+
+Pseudocode
+
+Level One
+
+1. input one student’s coursework mark
+2. input one student's prelim mark
+3. calculate percentage = ((coursework mark + prelim mark) *100) / 150
+4. display grade using a series of IF statements
+
+Level Two
+
+1.1 PRINT enter students coursework mark
+1.2 DO
+1.3    GET courseWorkMark
+1.4 WHILE < 0 OR > 60
+
+2.1 PRINT enter students prelim mark
+2.2 DO
+2.3    GET prelimMark
+2.4 WHILE < 0 OR > 90
+
+
