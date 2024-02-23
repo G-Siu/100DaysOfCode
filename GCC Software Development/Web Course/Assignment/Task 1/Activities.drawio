@@ -1,0 +1,136 @@
+<mxfile host="app.diagrams.net" modified="2024-02-22T17:56:16.668Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="2T3eNGRtS6S-ge6BKrXz" version="23.1.5" type="device">
+  <diagram name="Page-1" id="TmDt9XGM6VzQtZlpyaEq">
+    <mxGraphModel dx="1981" dy="1154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0ws95KaB-2t9atwoKgnw-3" value="Font:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Lemon&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Roboto" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-4" value="Colours:&lt;span style=&quot;&quot;&gt; &lt;br&gt;# BFEA7C&lt;br&gt;# 9BCF53&lt;br&gt;# 416D19&lt;br&gt;# FFF67E&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="550" y="40" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-5" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="40" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-1" value="Activities" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="0ws95KaB-2t9atwoKgnw-5">
+          <mxGeometry width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-2" value="Abbington Farm" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="0ws95KaB-2t9atwoKgnw-5">
+          <mxGeometry x="5" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BFEA7C;" vertex="1" parent="1">
+          <mxGeometry x="100" y="220" width="550" height="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-8" value="B&lt;span style=&quot;&quot;&gt;FEA7C&lt;/span&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#BFEA7C;" vertex="1" parent="1">
+          <mxGeometry x="590" y="220" width="60" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-9" value="&lt;div align=&quot;left&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;font color=&quot;#fff67e&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#fff67e&quot; style=&quot;font-size: 16px;&quot;&gt;Home&lt;/font&gt;&lt;font color=&quot;#fff67e&quot; style=&quot;font-size: 16px;&quot;&gt; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#fff67e&quot; style=&quot;font-size: 16px;&quot;&gt;Cafe&lt;/font&gt;&lt;font color=&quot;#fff67e&quot; style=&quot;font-size: 16px;&quot;&gt; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Activities &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#fff67e&quot; style=&quot;font-size: 16px;&quot;&gt;Contact&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9BCF53;fontSize=16;fontColor=#416D19;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="550" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-10" value="Logo" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-19" value="&lt;font color=&quot;#fff67e&quot;&gt;&lt;b&gt;Hands On Farming&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;Farm tools ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim eros id congue. Integer congue turpis accumsan bibendum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim. Nullam non dignissim magna. Praesent nisi nisi, tristique in &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;elementum vulputate, placerat eget dolor. Aenean at lectus nec libero &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;tempus ornare vehicula vel nisi.&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim eros id congue. Integer congue turpis accumsan bibendum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim. Nullam non dignissim magna. Praesent nisi nisi, tristique in &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;elementum vulputate, placerat eget dolor. Aenean at lectus nec libero &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;tempus ornare vehicula vel nisi.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fillColor=#9BCF53;" vertex="1" parent="1">
+          <mxGeometry x="380" y="660" width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-22" value="&lt;p&gt;&lt;font color=&quot;#ffffff&quot;&gt;© Copyright 2024&lt;/font&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;align=left;fillColor=#416D19;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1410" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-25" value="9BCF53" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9BCF53;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="590" y="165" width="60" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-26" value="&lt;font color=&quot;#ffffff&quot;&gt;416D19&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#416D19;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="530" y="1410" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-32" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="620" as="sourcePoint" />
+            <mxPoint x="695" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-33" value="fold" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="590" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-34" value="&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#fff67e&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Activities&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fillColor=#BFEA7C;strokeColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="160" y="230" width="430" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-35" value="&lt;font color=&quot;#fff67e&quot;&gt;&lt;b&gt;Visit Animals&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim eros id congue. Integer congue turpis accumsan bibendum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim. Nullam non dignissim magna. Praesent nisi nisi, tristique in &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;elementum vulputate, placerat eget dolor. Aenean at lectus nec libero &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;tempus ornare vehicula vel nisi.&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim eros id congue. Integer congue turpis accumsan bibendum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim. Nullam non dignissim magna. Praesent nisi nisi, tristique in &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;elementum vulputate, placerat eget dolor. Aenean at lectus nec libero &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;tempus ornare vehicula vel nisi.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fillColor=#9BCF53;" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-37" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="380" y="280" width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0ws95KaB-2t9atwoKgnw-37">
+          <mxGeometry width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-28" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="0ws95KaB-2t9atwoKgnw-37" source="0ws95KaB-2t9atwoKgnw-27" target="0ws95KaB-2t9atwoKgnw-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="230" as="sourcePoint" />
+            <mxPoint x="10" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-29" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="0ws95KaB-2t9atwoKgnw-37" source="0ws95KaB-2t9atwoKgnw-27" target="0ws95KaB-2t9atwoKgnw-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-290.0000000000001" y="320" as="sourcePoint" />
+            <mxPoint x="150" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-38" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="160" y="660" width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-39" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0ws95KaB-2t9atwoKgnw-38">
+          <mxGeometry width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-40" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="0ws95KaB-2t9atwoKgnw-38" source="0ws95KaB-2t9atwoKgnw-39" target="0ws95KaB-2t9atwoKgnw-39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="230" as="sourcePoint" />
+            <mxPoint x="10" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-41" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="0ws95KaB-2t9atwoKgnw-38" source="0ws95KaB-2t9atwoKgnw-39" target="0ws95KaB-2t9atwoKgnw-39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-290.0000000000001" y="320" as="sourcePoint" />
+            <mxPoint x="150" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-43" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="380" y="1040" width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-44" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0ws95KaB-2t9atwoKgnw-43">
+          <mxGeometry width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-45" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="0ws95KaB-2t9atwoKgnw-43" source="0ws95KaB-2t9atwoKgnw-44" target="0ws95KaB-2t9atwoKgnw-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="230" as="sourcePoint" />
+            <mxPoint x="10" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-46" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="0ws95KaB-2t9atwoKgnw-43" source="0ws95KaB-2t9atwoKgnw-44" target="0ws95KaB-2t9atwoKgnw-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-290.0000000000001" y="320" as="sourcePoint" />
+            <mxPoint x="150" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-47" value="&lt;font color=&quot;#fff67e&quot;&gt;&lt;b&gt;Pick Your Produce&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim eros id congue. Integer congue turpis accumsan bibendum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim. Nullam non dignissim magna. Praesent nisi nisi, tristique in &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;elementum vulputate, placerat eget dolor. Aenean at lectus nec libero &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;tempus ornare vehicula vel nisi.&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim eros id congue. Integer congue turpis accumsan bibendum &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;dignissim. Nullam non dignissim magna. Praesent nisi nisi, tristique in &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;elementum vulputate, placerat eget dolor. Aenean at lectus nec libero &lt;/font&gt;&lt;font color=&quot;#416d19&quot;&gt;tempus ornare vehicula vel nisi.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fillColor=#9BCF53;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1040" width="210" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-49" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="0ws95KaB-2t9atwoKgnw-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="1030" as="sourcePoint" />
+            <mxPoint x="695" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-48" value="fold" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1000" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0ws95KaB-2t9atwoKgnw-50" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="1030" as="sourcePoint" />
+            <mxPoint x="695" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
