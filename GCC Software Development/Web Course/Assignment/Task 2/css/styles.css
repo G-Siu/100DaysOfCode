@@ -3,3 +3,69 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --colour-lightblue: #e0f4ff;
+    --colour-blue: #39a7ff;
+    --colour-yellow: #ffc938;
+    --colour-white: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lemon", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: var(--colour-yellow);
+}
+
+header a {
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 550px;
+    width: 100%;
+    color: var(--colour-blue);
+}
+
+header li {
+    list-style: none;
+}
+
+main {
+    background: var(--colour-lightblue);
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 150px;
+    filter: invert(100%);
+}
+
+@media (max-width: 1500px) {
+    header a {
+        font-size: 30px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
