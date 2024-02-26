@@ -32,6 +32,13 @@ a {
     cursor: pointer;
 }
 
+h1 {
+    border-bottom: 2px solid var(--colour-white);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
 header {
     position: fixed;
     top: 0px;
@@ -71,7 +78,7 @@ main {
 }
 
 nav {
-    width: 100%;
+    width: 200%;
     margin: 25px;
 }
 
@@ -113,8 +120,10 @@ nav li {
 
 }
 
-.image-right:hover ~ .text-left {
-    width: 100px;
+.image-right:hover + .text-left {
+    width: 60px;
+    color: transparent;
+    min-width: unset;
 }
 
 .page-content {
@@ -143,7 +152,7 @@ nav li {
 }
 
 .text-left p {
-    font-family: "roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.2;
     margin: 10px 0;
     text-align: justify;
@@ -191,7 +200,7 @@ nav a:hover, #current-link:hover {
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
     header a {
         font-size: 24px;
     }
@@ -204,6 +213,16 @@ nav a:hover, #current-link:hover {
 }
 
 @media screen and (max-width: 1150px) {
+    header a {
+        font-size: 18px;
+    }
+    
+    .logo {
+        width: 60px;
+    }
+    #current-link, nav a:hover {
+        font-size: 18px !important;
+    }
     .page-content {
         display: flex;
         flex-direction: column;
@@ -222,17 +241,5 @@ nav a:hover, #current-link:hover {
         position: unset;
         min-width: 600px;
         margin: 25px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    header a {
-        font-size: 18px;
-    }
-    .logo {
-        width: 60px;
-    }
-    #current-link, nav a:hover {
-        font-size: 18px !important;
     }
 }
