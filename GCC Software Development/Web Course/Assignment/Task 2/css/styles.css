@@ -19,7 +19,6 @@ html {
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    
 }
 
 body {
@@ -112,18 +111,22 @@ nav li {
 }
 
 .image-right {
-    position: relative;
+    position: absolute;
     height: 50vw;
     max-height: 830px;
     border-radius: 0 50px 50px 0;
     min-height: 300px;
-
 }
 
-.image-right:hover + .text-left {
+.image-right:hover + #first-text {
     width: 60px;
     color: transparent;
     min-width: unset;
+    transition: width 0.5s ease-out, color 0.2s ease-out;
+}
+
+.image-right:hover + div h1 {
+    border-bottom: none;
 }
 
 .page-content {
@@ -132,7 +135,8 @@ nav li {
     padding: 25px;
 }
 
-.text-left, .text-right {
+.text-left,
+.text-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +144,7 @@ nav li {
     background: var(--colour-blue);
     color: white;
     padding: 20px;
-    position: absolute;
+    position: relative;
     z-index: 1;
     margin: -10px 0;
     height: 52vw;
@@ -179,7 +183,8 @@ nav li {
     color: var(--colour-blue);
 }
 
-nav a:hover, #current-link:hover {
+nav a:hover,
+#current-link:hover {
     border-radius: 20px;
     font-size: 40px;
     transition: font-size 0.5s ease, background-color 0.5s ease;
@@ -192,7 +197,8 @@ nav a:hover, #current-link:hover {
     .logo {
         width: 100px;
     }
-    #current-link, nav a:hover {
+    #current-link,
+    nav a:hover {
         font-size: 34px !important;
     }
     .text-left {
@@ -207,7 +213,8 @@ nav a:hover, #current-link:hover {
     .logo {
         width: 80px;
     }
-    #current-link, nav a:hover {
+    #current-link,
+    nav a:hover {
         font-size: 28px !important;
     }
 }
@@ -216,16 +223,17 @@ nav a:hover, #current-link:hover {
     header a {
         font-size: 18px;
     }
-    
+
     .logo {
         width: 60px;
     }
-    #current-link, nav a:hover {
+    #current-link,
+    nav a:hover {
         font-size: 18px !important;
     }
     .page-content {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
     }
@@ -241,5 +249,6 @@ nav a:hover, #current-link:hover {
         position: unset;
         min-width: 600px;
         margin: 25px;
+        pointer-events: none;
     }
 }
