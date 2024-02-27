@@ -31,11 +31,11 @@ a {
     cursor: pointer;
 }
 
-h1 {
-    border-bottom: 2px solid var(--colour-white);
+footer {
     text-align: center;
-    padding: 5px;
-    margin-bottom: 5px;
+    color: var(--colour-white);
+    padding: 10px;
+    background: var(--colour-blue);
 }
 
 header {
@@ -70,10 +70,8 @@ header li {
 }
 
 main {
-    margin: 110px auto;
     display: flex;
-    align-items: center;
-    max-width: 1600px;
+    flex-direction: column;
 }
 
 nav {
@@ -108,51 +106,83 @@ nav li {
 
 .flip {
     transform: scaleX(-1);
+    border-radius: 0 50px 50px 0 !important;
 }
 
-.image-right {
+.image {
+    display: block;
     position: absolute;
     height: 50vw;
     max-height: 830px;
-    border-radius: 0 50px 50px 0;
+    border-radius: 50px 0 0 50px;
     min-height: 300px;
 }
 
-.image-right:hover + #first-text {
+#first-image:hover + #first-text, #second-image:hover + #second-text, #second-image:hover + #second-text a, #third-image:hover + #third-text, #third-image:hover + #third-text a {
     width: 60px;
     color: transparent;
     min-width: unset;
-    transition: width 0.5s ease-out, color 0.2s ease-out;
+    transition: width 0.5s ease-out;
 }
 
-.image-right:hover + div h1 {
+#first-image:hover + #first-text h1, #second-image:hover + #second-text h1, #third-image:hover + #third-text h1 {
     border-bottom: none;
+}
+
+#first-image:not(hover) + #first-text, #second-image:not(hover) + #second-text, #second-image:not(hover) + #second-text a, #third-image:not(hover) + #third-text, #third-image:not(hover) + #third-text a {
+    transition: width 0.5s ease-out, color 1s ease-in;
+}
+
+#first-image:not(hover) + #first-text h1, #second-image:not(hover) + #second-text h1, #third-image:not(hover) + #third-text h1 {
+    transition: border-bottom 0.5s ease-out;
 }
 
 .page-content {
     height: 100vh;
-    width: 100vw;
-    padding: 25px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.text-left,
-.text-right {
+.text-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 50px 0 0 50px;
     background: var(--colour-blue);
-    color: white;
+    color: var(--colour-white);
     padding: 20px;
-    position: relative;
     z-index: 1;
-    margin: -10px 0;
     height: 52vw;
     width: 60vw;
     max-height: 850px;
     max-width: 1000px;
     min-height: 300px;
     min-width: 300px;
+}
+
+.text-left h1{
+    border-bottom: 1px solid var(--colour-white);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.text-left a {
+    color: var(--colour-white);
+}
+
+.text-left a:hover {
+    color: var(--colour-blue);
+    background-color: var(--colour-white) !important;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 50px;
+    transition: none !important
+}
+
+.text-left a:hover h1 {
+    border-bottom: none;
 }
 
 .text-left p {
@@ -169,6 +199,27 @@ nav li {
     filter: invert(100%);
 }
 
+#bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colour-blue);
+    height: 100vh;
+    color: var(--colour-white);
+    line-height: 1.2;
+    min-width: 600px;
+}
+
+#bottom h1 {
+    padding: 25px 0 ;
+    font-size: 40px;
+}
+
+#bottom p {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
 #current-link {
     color: var(--colour-white);
     font-size: 40px;
@@ -181,6 +232,10 @@ nav li {
 #current-link:active {
     background-color: var(--colour-white);
     color: var(--colour-blue);
+}
+
+#top {
+    background: linear-gradient(var(--colour-lightblue) 90%, var(--colour-blue));
 }
 
 nav a:hover,
@@ -201,9 +256,6 @@ nav a:hover,
     nav a:hover {
         font-size: 34px !important;
     }
-    .text-left {
-        font-size: 0.8rem;
-    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -223,7 +275,6 @@ nav a:hover,
     header a {
         font-size: 18px;
     }
-
     .logo {
         width: 60px;
     }
@@ -232,10 +283,9 @@ nav a:hover,
         font-size: 18px !important;
     }
     .page-content {
-        display: flex;
         flex-direction: column-reverse;
-        align-items: center;
         justify-content: center;
+        margin: 110px auto;
     }
     .text-left {
         min-height: 500px !important;
@@ -243,9 +293,10 @@ nav a:hover,
         border-radius: 50px;
         position: unset;
         margin: 0;
+        font-size: 0.8rem;
     }
-    .image-right {
-        border-radius: 50px;
+    .image {
+        border-radius: 50px !important;
         position: unset;
         min-width: 600px;
         margin: 25px;
