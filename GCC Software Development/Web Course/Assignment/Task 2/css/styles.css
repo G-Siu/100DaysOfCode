@@ -1,7 +1,9 @@
 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
@@ -70,8 +72,7 @@ header li {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    margin: 120px 0;
 }
 
 nav {
@@ -110,53 +111,21 @@ nav li {
 }
 
 .image {
-    display: block;
-    position: absolute;
+    position: relative;
     height: 50vw;
     max-height: 830px;
     border-radius: 50px 0 0 50px;
     min-height: 300px;
 }
 
-#first-image:hover + #first-text,
-#second-image:hover + #second-text,
-#second-image:hover + #second-text a,
-#third-image:hover + #third-text,
-#third-image:hover + #third-text a {
-    width: 60px;
-    color: transparent;
-    min-width: unset;
-    transition: width 0.5s ease-out;
-}
-
-#first-image:hover + #first-text h1,
-#second-image:hover + #second-text h1,
-#third-image:hover + #third-text h1 {
-    border-bottom: none;
-}
-
-#first-image:not(hover) + #first-text,
-#second-image:not(hover) + #second-text,
-#second-image:not(hover) + #second-text a,
-#third-image:not(hover) + #third-text,
-#third-image:not(hover) + #third-text a {
-    transition: width 0.5s ease-out, color 1s ease-in;
-}
-
-#first-image:not(hover) + #first-text h1,
-#second-image:not(hover) + #second-text h1,
-#third-image:not(hover) + #third-text h1 {
-    transition: border-bottom 0.5s ease-out;
-}
-
-.page-content {
+.page-content{
     height: 100vh;
     display: flex;
     align-items: center;
-    margin: 0 auto;
 }
 
 .text-left {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,6 +183,15 @@ nav li {
 .logo {
     width: 150px;
     filter: invert(100%);
+}
+
+#background {
+    background: linear-gradient(
+        var(--colour-lightblue) 90%,
+        var(--colour-blue)
+    );
+    display: flex;
+    flex-direction: column;
 }
 
 #bottom {
@@ -278,6 +256,37 @@ nav li {
     color: var(--colour-blue);
 }
 
+#first-image:hover + #first-text,
+#second-image:hover + #second-text,
+#second-image:hover + #second-text a,
+#third-image:hover + #third-text,
+#third-image:hover + #third-text a {
+    width: 60px;
+    color: transparent;
+    min-width: unset;
+    transition: width 0.5s ease-out;
+}
+
+#first-image:hover + #first-text h1,
+#second-image:hover + #second-text h1,
+#third-image:hover + #third-text h1 {
+    border-bottom: none;
+}
+
+#first-image:not(hover) + #first-text,
+#second-image:not(hover) + #second-text,
+#second-image:not(hover) + #second-text a,
+#third-image:not(hover) + #third-text,
+#third-image:not(hover) + #third-text a {
+    transition: width 0.5s ease-out, color 1s ease-in;
+}
+
+#first-image:not(hover) + #first-text h1,
+#second-image:not(hover) + #second-text h1,
+#third-image:not(hover) + #third-text h1 {
+    transition: border-bottom 0.5s ease-out;
+}
+
 #social ul {
     display: flex;
     flex-direction: row;
@@ -297,10 +306,9 @@ nav li {
 }
 
 #top {
-    background: linear-gradient(
-        var(--colour-lightblue) 90%,
-        var(--colour-blue)
-    );
+    display: flex;
+    flex-direction: column;
+    margin: -120px auto;
 }
 
 nav a:hover,
