@@ -40,6 +40,10 @@ footer {
     background: var(--colour-blue);
 }
 
+footer a {
+    color: var(--colour-white);
+}
+
 header {
     position: fixed;
     top: 0px;
@@ -105,6 +109,12 @@ nav li {
     text-align: center;
 }
 
+.activities-container {
+    display: flex;
+    gap: 2em;
+    margin: auto;
+}
+
 .flip {
     transform: scaleX(-1);
     border-radius: 0 50px 50px 0 !important;
@@ -132,7 +142,7 @@ nav li {
 .shop-center {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin-top: 20px;
 }
 
 .shop-content {
@@ -176,6 +186,7 @@ nav li {
     width: 100%;
     min-width: 600px;
     max-width: 800px;
+    min-height: 600px;
     border-radius: 50px;
 }
 
@@ -233,6 +244,13 @@ nav li {
 
 .text-left ul {
     margin: 0 20px;
+}
+
+#activities-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
 }
 
 #background {
@@ -345,7 +363,8 @@ nav li {
 }
 
 #cafe,
-#shop {
+#shop,
+.activities {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -361,7 +380,8 @@ nav li {
 }
 
 #cafe h1,
-#shop h1 {
+#shop h1,
+.activities h1 {
     margin-bottom: 5px;
     padding: 5px;
     text-align: center;
@@ -385,13 +405,14 @@ nav li {
 
 #shop p,
 #cafe p,
-#cafe table {
+#cafe table,
+.activities p {
     margin: 10px 0;
     font-family: "Roboto", sans-serif;
     font-size: 24px;
 }
 
-#shop-main {
+#main {
     margin: 0;
 }
 
@@ -453,42 +474,41 @@ nav a:hover,
     .shop-content section {
         flex-direction: column;
     }
-    #cafe h1,
     #cafe p,
     #cafe p:nth-child(3),
     #cafe table,
-    #shop h1,
     #shop p,
-    #cafe-opening {
+    #cafe-opening,
+    .activities p {
         font-size: 16px;
         margin-top: 10px;
     }
+    #cafe h1,
+    #shop h1,
+    .activities h1 {
+        font-size: 20px;
+    }
     #cafe,
     #shop,
-    .shop-image {
-        width: 500px;
-        height: 500px;
+    .shop-image,
+    .activities {
+        width: 600px;
+        height: 600px;
     }
     .shop-content a {
         display: none;
     }
-}
-
-@media screen and (max-width: 1150px) {
-    header a {
-        font-size: 18px;
+    .activities-container {
+        flex-direction: column;
+        justify-content: center;
     }
-    .logo {
-        width: 60px;
-    }
-    #current-link,
-    nav a:hover {
-        font-size: 18px !important;
-    }
-    .page-content {
+    .page-content{
         flex-direction: column-reverse;
         justify-content: center;
         margin: 110px auto;
+    }
+    #second-activities {
+        flex-direction: column-reverse;
     }
     .text-left {
         min-height: 500px !important;
@@ -510,5 +530,21 @@ nav a:hover,
     }
     #bottom-center {
         flex-direction: column;
+    }
+    .shop-center {
+        margin: 110px auto;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    header a {
+        font-size: 18px;
+    }
+    .logo {
+        width: 60px;
+    }
+    #current-link,
+    nav a:hover {
+        font-size: 18px !important;
     }
 }
