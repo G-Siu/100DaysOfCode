@@ -139,12 +139,6 @@ nav li {
     align-items: center;
 }
 
-.shop-center {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .shop-content {
     height: 100vh;
     display: flex;
@@ -471,6 +465,9 @@ nav a:hover,
     nav a:hover {
         font-size: 28px !important;
     }
+    .shop-content {
+        margin: 110px auto;
+    }
     .shop-content section {
         flex-direction: column;
     }
@@ -530,9 +527,6 @@ nav a:hover,
     }
     #bottom-center {
         flex-direction: column;
-    }
-    .shop-center {
-        margin: 110px auto;
     }
 }
 
