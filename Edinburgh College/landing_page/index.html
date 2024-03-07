@@ -10,11 +10,31 @@
             integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
             crossorigin="anonymous"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+        />
+        <style>
+            .maintext {
+                position: relative;
+            }
+            .maintext img, .overlay {
+                position: absolute;
+            }
+            .text-class {
+                text-shadow: 0px 2px 5px white;
+            }
+            .text-blue {
+                color: #2135a0;
+            }
+        </style>
     </head>
-    <body>
+    <body class="bg-dark">
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand text-primary" href="index.html">Blue Water</a>
+                <a class="navbar-brand text-primary" href="index.html"
+                    >Blue Water</a
+                >
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -36,7 +56,7 @@
                                 class="nav-link text-primary"
                                 aria-current="page"
                                 href="#"
-                                >Home</a
+                                ><i class="bi-house-fill"></i> Home</a
                             >
                         </li>
                         <li class="nav-item px-3">
@@ -54,5 +74,22 @@
                 </div>
             </div>
         </nav>
+        <div class="maintext">
+            <img
+                src="images/water.jpg"
+                class="img-responsive w-100"
+                alt="submerged view of blue sea water"
+            />
+            <span class="overlay w-100 px-5 py-3 text-blue text-class">
+                <h1 class="text-center border-3 border-bottom">BLUE WATER</h1>
+                <p class="px-5 fs-5 fw-bolder" style="text-align: justify;">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non consectetur erat, non blandit urna. Sed sed nisi pulvinar, varius nunc consectetur, commodo dolor. Proin ac porttitor diam. Nunc dictum odio sit amet justo posuere, non blandit nisi luctus. Donec tristique efficitur ante, quis lacinia neque cursus ac. Phasellus egestas tortor eget ante egestas rhoncus. Mauris rutrum neque vitae mauris malesuada auctor. Proin id eros id neque consectetur ultrices. Ut semper diam quis purus auctor pellentesque. Aenean accumsan enim vel urna sodales convallis. Curabitur ut odio ullamcorper urna hendrerit consectetur. Maecenas ut pharetra odio.
+                </p>
+                <p class="px-5 fs-5 fw-bolder" style="text-align: justify;">
+                    Integer magna nisi, molestie vitae mi at, elementum porttitor lectus. Quisque sit amet purus vitae odio bibendum semper quis in justo. Nam tempor metus at dictum scelerisque. Duis eget nunc id ante laoreet dignissim fringilla quis risus. Duis volutpat placerat nibh, et lobortis mauris accumsan quis. Nullam vehicula fringilla quam, ac rutrum ex posuere sit amet. Maecenas luctus, nisi sollicitudin euismod condimentum, nulla metus viverra urna, at blandit elit risus sit amet purus. Sed ut odio lacinia, placerat erat sed, pretium eros. Quisque nisl dui, pharetra mattis viverra id, gravida vitae odio. Mauris massa magna, cursus placerat sem vitae, tempor ultricies lacus. Nulla accumsan lorem eget ligula luctus, in fringilla nibh sollicitudin. Phasellus facilisis, risus et tristique dignissim, augue eros varius neque, eget dictum sem lectus a nulla. Nulla porttitor eleifend ante iaculis molestie. Nam vel congue lacus. Etiam felis sem, laoreet in dictum in, rhoncus quis neque. 
+                </p>
+            </span>
+        </div>
     </body>
 </html>
