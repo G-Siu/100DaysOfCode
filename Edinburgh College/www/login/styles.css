@@ -1,0 +1,45 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.card {
+    margin-top: 40px;
+    border: none;
+    border-radius: 0;
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-item a {
+    color: #666;
+    font-weight: 600;
+}
+
+.nav-item a:hover {
+    color: #333;
+}
+
+.nav-item a.active {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #444;
+    border-color: #444;
+}
