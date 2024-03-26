@@ -1,0 +1,47 @@
+body {
+    background-color: #f7f7f7; /* Change the background color to a light gray */
+}
+
+.card {
+    margin-top: 40px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow to the card */
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-item a {
+    color: #333; /* Change the color of the navigation tabs to a dark gray */
+    font-weight: 600;
+}
+
+.nav-item a:hover {
+    color: #666; /* Change the hover color of the navigation tabs to a medium gray */
+}
+
+.nav-item a.active {
+    color: #333; /* Change the active color of the navigation tabs to a dark gray */
+    border-bottom: 2px solid #333; /* Add a dark gray border to the active navigation tab */
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #337ab7; /* Change the background color of the buttons to a dark blue */
+    border-color: #337ab7; /* Change the border color of the buttons to a dark blue */
+    color: #ffffff; /* Change the text color of the buttons to white */
+}
+
+.btn-primary:hover {
+    background-color: #23527c; /* Change the hover background color of the buttons to a darker blue */
+    border-color: #23527c; /* Change the hover border color of the buttons to a darker blue */
+}
