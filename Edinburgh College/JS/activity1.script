@@ -1,0 +1,15 @@
+// a) -5 + 8 * 6
+exerciseA = -5 + 8 * 6      // 43
+console.log(exerciseA)
+
+// b) (55 + 9) % 9
+exerciseB = (55 + 9) % 9    // 1
+console.log(exerciseB)
+
+// c) 20 + -3 * 5 / 8
+exerciseC = 20 + -3 * 5 / 8     // 18.125
+console.log(exerciseC)
+
+// d) 5 + 15 / 3 * 2 - 8 % 3
+exerciseD = 5 + 15 / 3 * 2 - 8 % 3      // 13.0
+console.log(exerciseD)
