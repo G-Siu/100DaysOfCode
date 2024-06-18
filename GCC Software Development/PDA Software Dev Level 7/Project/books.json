@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Book 1",
+        "author": "Author 1",
+        "genre": "Best genre",
+        "year": 2024,
+        "price": 24.0
+    },
+    {
+        "title": "Book 1",
+        "author": "Author 2",
+        "genre": "Also best genre",
+        "year": 2022,
+        "price": 1.0
+    },
+    {
+        "title": "Book 2",
+        "author": "Author 1",
+        "genre": "Worst genre",
+        "year": 2025,
+        "price": 12.99
+    }
+]

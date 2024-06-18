@@ -1,0 +1,99 @@
+function mainMenu()
+    display "1. Add Book"
+    display "2. Search Book"
+    display "3. Sort Books"
+    display "4. Find Oldest Book"
+    display "5. Find Newest Book"
+    display "6. Export Titles to CSV"
+    display "7. Export Years to CSV"
+    display "8. Count Titles by Author"
+    display "9. Exit"
+    choice = getUserInput("Select an option:")
+    switch(choice)
+        case 1:
+            addBook()
+        case 2:
+            searchBook()
+        case 3:
+            sortBooks()
+        case 4:
+            findOldestBook()
+        case 5:
+            findNewestBook()
+        case 6:
+            exportTitlesToCSV()
+        case 7:
+            exportYearsToCSV()
+        case 8:
+            countTitlesByAuthor()
+        case 9:
+            exitProgram()
+        default:
+            display "Invalid option. Please try again."
+            mainMenu()
+
+function addBook()
+    title = getUserInput("Enter title:")
+    author = getUserInput("Enter author:")
+    genre = getUserInput("Enter genre:")
+    publicationYear = getUserInput("Enter publication year:")
+    price = getUserInput("Enter price:")
+    newBook = createBook(title, author, genre, publicationYear, price)
+    addBookToCollection(newBook)
+    display "Book added successfully."
+    mainMenu()
+
+function searchBook()
+    title = getUserInput("Enter title:")
+    book = findBookByTitle(title)
+    if book is not null
+        display "Title: " + book.title
+        display "Author: " + book.author
+        display "Genre: " + book.genre
+        display "Publication Year: " + book.publicationYear
+        display "Price: " + book.price
+    else
+        display "Book not found."
+    mainMenu()
+
+function sortBooks()
+    sortedBooks = sortBookCollectionByTitle()
+    for book in sortedBooks
+        display book.title
+    mainMenu()
+
+function findOldestBook()
+    oldestBook = getOldestBookFromCollection()
+    display "Title: " + oldestBook.title
+    display "Author: " + oldestBook.author
+    display "Genre: " + oldestBook.genre
+    display "Publication Year: " + oldestBook.publicationYear
+    display "Price: " + oldestBook.price
+    mainMenu()
+
+function findNewestBook()
+    newestBook = getNewestBookFromCollection()
+    display "Title: " + newestBook.title
+    display "Author: " + newestBook.author
+    display "Genre: " + newestBook.genre
+    display "Publication Year: " + newestBook.publicationYear
+    display "Price: " + newestBook.price
+    mainMenu()
+
+function exportTitlesToCSV()
+    filePath = getUserInput("Enter the file path to save CSV:")
+    exportBookTitlesToCSV(filePath)
+    display "Titles exported successfully."
+    mainMenu()
+
+function exportYearsToCSV()
+    filePath = getUserInput("Enter the file path to save CSV:")
+    exportBookYearsToCSV(filePath)
+    display "Years exported successfully."
+    mainMenu()
+
+function countTitlesByAuthor()
+    author = getUserInput("Enter author's name:")
+    count = countBooksByAuthor(author)
+    display author + " has written " + count + " books."
+    mainMenu()
