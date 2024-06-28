@@ -16,11 +16,15 @@ content %}
                 </thead>
                 <tbody>
                   {% for row in cafes[1:] %}
-                  <tr>
-                    {% for data in row %}
-                    <td>{{ data }}</td>
-                    {% endfor %}
-                  </tr>
+                      <tr>
+                        {% for data in row %}
+                          {% if data.startswith("http") %}
+                          <td><a href="{{ data }}">Map Link</a></td>
+                          {% else %}
+                          <td>{{ data }}</td>
+                          {% endif %}
+                        {% endfor %}
+                      </tr>
                   {% endfor %}
                 </tbody>
             </table>
