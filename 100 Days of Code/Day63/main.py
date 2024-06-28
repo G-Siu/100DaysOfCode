@@ -1,8 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_wtf import FlaskForm
-from flask_bootstrap import Bootstrap5
-from wtforms import StringField, SelectField, SubmitField
-from wtforms.validators import DataRequired, URL
+import sqlite3
 
 
 '''
@@ -44,3 +41,4 @@ def add():
 if __name__ == "__main__":
     app.run(debug=True)
 
+db = sqlite3.connect("books-collection.db")
